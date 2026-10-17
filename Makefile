@@ -46,9 +46,16 @@ GFXBUILD    := $(BUILD)
 
 # SMDH metadata optionnel
 APP_TITLE       ?= ReSharp3DS
-APP_DESCRIPTION ?= Runtime C# for Nintendo 3DS
-APP_AUTHOR      ?= Saysaa
-APP_DESC_INT	:=	-en "C-Sharp runtime for Nintendo 3DS"
+APP_DESCRIPTION	:=	ReSharp3DS: C-Sharp runtime for Nintendo 3DS  # for Nintendo 3DS
+APP_AUTHOR      ?= Saiitanaa
+APP_DESC_INT	:=	-gl "ReSharp3DS: C-Sharp Laufzeitumgebung für Nintendo 3DS" \
+					-pl "ReSharp3DS: Ambiente de execução C-Sharp para Nintendo 3DS" \
+					-il "ReSharp3DS: runtime C-Sharp per Nintendo 3DS" \
+					-fl "ReSharp3DS : environnement d'exécution C-Sharp pour Nintendo 3DS" \
+					-jl "ReSharp3DS: ニンテンドー3DS向けC-Sharpランタイム" \
+					-rl "ReSharp3DS: среда выполнения C-Sharp для Nintendo 3DS" \
+					-sl "ReSharp3DS: Entorno de ejecución de C-Sharp para Nintendo 3DS" \
+					-scl "ReSharp3DS：面向任天堂 3DS 的 C-Sharp 运行时"
 #---------------------------------------------------------------------------------
 # Options générales
 #---------------------------------------------------------------------------------
