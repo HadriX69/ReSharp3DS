@@ -1,7 +1,6 @@
 #---------------------------------------------------------------------------------
 .SUFFIXES:
 #---------------------------------------------------------------------------------
-
 ifeq ($(strip $(DEVKITARM)),)
 $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
 endif
@@ -25,13 +24,12 @@ include $(DEVKITARM)/3ds_rules
 #   make clean
 #   make distclean
 #---------------------------------------------------------------------------------
-
 TARGET      := ReSharp3DS
 
 # BUILD_TYPE:
-#   dev     = debug local
-#   beta    = distribution fréquente / beta publique
-#   release = build propre pour publication stable
+#   dev     = local debug
+#   beta    = frequent distribution / public beta
+#   release = clean build for stable release
 BUILD_TYPE ?= release
 
 BUILD       := build-$(BUILD_TYPE)
@@ -41,37 +39,42 @@ INCLUDES    := include source/clr
 GRAPHICS    := gfx
 GFXBUILD    := $(BUILD)
 
-# Si tu as un RomFS, décommente :
+# If you have a RomFS, uncomment:
 # ROMFS := romfs
 
-# SMDH metadata optionnel
+# Optional SMDH metadata
 APP_TITLE       ?= ReSharp3DS
-APP_DESCRIPTION ?= Runtime C# for Nintendo 3DS
-APP_AUTHOR      ?= Saysaa
-APP_DESC_INT	:=	-en "C-Sharp runtime for Nintendo 3DS"
-#---------------------------------------------------------------------------------
-# Options générales
-#---------------------------------------------------------------------------------
+APP_DESCRIPTION	:=	ReSharp3DS: C-Sharp runtime for Nintendo 3DS  # for Nintendo 3DS
+APP_AUTHOR      ?= Saiitanaa
+APP_DESC_INT	:=	-gl "ReSharp3DS: C-Sharp Laufzeitumgebung für Nintendo 3DS" \
+					-pl "ReSharp3DS: Ambiente de execução C-Sharp para Nintendo 3DS" \
+					-il "ReSharp3DS: runtime C-Sharp per Nintendo 3DS" \
+					-fl "ReSharp3DS : environnement d'exécution C-Sharp pour Nintendo 3DS" \
+					-jl "ReSharp3DS: ニンテンドー3DS向けC-Sharpランタイム" \
+					-rl "ReSharp3DS: среда выполнения C-Sharp для Nintendo 3DS" \
+					-sl "ReSharp3DS: Entorno de ejecución de C-Sharp para Nintendo 3DS" \
+					-scl "ReSharp3DS：面向任天堂 3DS 的 C-Sharp 运行时"
 
+#---------------------------------------------------------------------------------
+# General options
+#---------------------------------------------------------------------------------
 ENABLE_RTTI ?= 1
 CXXSTD      ?= gnu++11
 
-# Par défaut :
-# - dev  : permissive activé pour portage difficile
-# - beta : permissive désactivé pour éviter les erreurs cachées
-# - release : permissive désactivé
+# By default:
+# - dev     : permissive enabled for difficult porting
+# - beta    : permissive disabled to avoid hidden errors
+# - release : permissive disabled
 PERMISSIVE ?= 0
 
 #---------------------------------------------------------------------------------
 # 3DS CPU / ABI
 #---------------------------------------------------------------------------------
-
 ARCH := -march=armv6k -mtune=mpcore -mfloat-abi=hard -mtp=soft
 
 #---------------------------------------------------------------------------------
 # Build flags
 #---------------------------------------------------------------------------------
-
 COMMON_FLAGS := -Wall -mword-relocations -ffunction-sections $(ARCH)
 
 ifeq ($(BUILD_TYPE),dev)
@@ -88,14 +91,12 @@ endif
 #---------------------------------------------------------------------------------
 # C flags
 #---------------------------------------------------------------------------------
-
 CFLAGS := $(COMMON_FLAGS)
 CFLAGS += $(INCLUDE) -D__3DS__
 
 #---------------------------------------------------------------------------------
 # C++ flags
 #---------------------------------------------------------------------------------
-
 CXXFLAGS := $(COMMON_FLAGS)
 CXXFLAGS += $(INCLUDE) -D__3DS__
 CXXFLAGS += -std=$(CXXSTD)
@@ -114,12 +115,11 @@ endif
 #---------------------------------------------------------------------------------
 # Assembler / linker
 #---------------------------------------------------------------------------------
-
 ASFLAGS := -g $(ARCH)
 
 LDFLAGS := -specs=3dsx.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-# citro2d dépend de citro3d/libctru, donc on garde cet ordre.
+# citro2d depends on citro3d/libctru, so keep this order.
 LIBS := -lcitro2d -lcitro3d -lctru -lm
 
 LIBDIRS := $(CTRULIB)
@@ -127,7 +127,6 @@ LIBDIRS := $(CTRULIB)
 #---------------------------------------------------------------------------------
 # Nothing below normally needs editing
 #---------------------------------------------------------------------------------
-
 ifneq ($(BUILD),$(notdir $(CURDIR)))
 
 export OUTPUT := $(CURDIR)/$(TARGET)
