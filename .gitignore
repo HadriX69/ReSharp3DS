@@ -1,6 +1,7 @@
 /builder/bin
 /builder/obj
-
+builder/.DS_Store
+builder/.vscode
 ## 
 .DS_Store
 /.idea
