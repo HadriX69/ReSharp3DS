@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 
-static const char* APP_VERSION = "v2.2.6";
+static const char* APP_VERSION = "v2.2.7";
 
 static const char* ROOT_PATH = "sdmc:/ReSharp3DS";
 static const char* BIN_PATH = "sdmc:/ReSharp3DS/bin";
