@@ -11,11 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// ------------------------------------------------------------
-// Config
-// ------------------------------------------------------------
-
-static const char* APP_VERSION = "v2.2.5-release";
+static const char* APP_VERSION = "v2.2.6";
 
 static const char* ROOT_PATH = "sdmc:/ReSharp3DS";
 static const char* BIN_PATH = "sdmc:/ReSharp3DS/bin";
@@ -23,10 +19,6 @@ static const char* MSCORLIB_PATH = "sdmc:/ReSharp3DS/bin/mscorlib.pe";
 static const char* MSCORLIB_URL = "https://github.com/saysaa/ReSharp3DS/releases/latest/download/mscorlib.pe";
 static const char* MSCORLIB_FALLBACK_URL = "https://raw.githubusercontent.com/saysaa/ReSharp3DS/sdk/bin/mscorlib.pe";
 
-
-// ------------------------------------------------------------
-// Browser state
-// ------------------------------------------------------------
 
 #define MAX_BROWSER_ITEMS 64
 #define MAX_ITEM_NAME 128
@@ -56,7 +48,6 @@ static C2D_TextBuf textBuf = nullptr;
 static bool initialized = false;
 static bool folderFound = false;
 static bool mscorlibFound = false;
-// static bool latestFound = false;
 static bool canLaunch = false;
 
 static BrowserItem browserItems[MAX_BROWSER_ITEMS];
@@ -72,16 +63,8 @@ static u64 statusTextTime = 0;
 static bool statusTextTemporary = false;
 
 
-// ------------------------------------------------------------
-// Forward declarations
-// ------------------------------------------------------------
-
 static void draw_text(const char* text, float x, float y, float scale, u32 color);
 static void draw_text_centered(const char* text, float screenWidth, float y, float scale, u32 color);
-
-// ------------------------------------------------------------
-// Status helpers
-// ------------------------------------------------------------
 
 static int GetSystemLanguage()
 {
@@ -89,11 +72,6 @@ static int GetSystemLanguage()
     Result res;
 
     res = CFGU_GetSystemLanguage(&language);
-    /* 1 = english, 2 = french, 3 = german, 4 = italian, 5 = japanese,
-    6 = spanish, 7 = korean, 8 = dutch, 9 = portuguese (brazil),
-    10 = russian, 11 = chinese (simplified), 12 = chinese (traditional)*/
-
-    // Error handling: if the function fails, return -1.
     if (res != 0)
     {
         return -1;
@@ -130,10 +108,6 @@ static void update_status_text_timer(void)
         statusTextTemporary = false;
     }
 }
-
-// ------------------------------------------------------------
-// Runtime file helpers
-// ------------------------------------------------------------
 
 static bool ensure_runtime_files(void)
 {
@@ -185,10 +159,6 @@ static bool ensure_runtime_files(void)
 }
 
 
-
-// ------------------------------------------------------------
-// Filesystem helpers
-// ------------------------------------------------------------
 
 static bool path_is_directory(const char* path)
 {
@@ -643,7 +613,7 @@ static void scan_current_directory(void)
     if (!dir)
     {
         if(GetSystemLanguage() == 2)
-        { // if console language is french
+        {
             set_status_text("Impossible d'ouvrir le dossier", true);
         } else
         {
@@ -770,7 +740,6 @@ static void check_filesystem(void)
     {
         folderFound = false;
         mscorlibFound = false;
-        // latestFound = false;
         canLaunch = false;
         browserItemCount = 0;
         selectedAppPath[0] = '\0';
@@ -793,7 +762,6 @@ static void check_filesystem(void)
     }
 
     mscorlibFound = ensure_runtime_files();
-    // latestFound = ensure_latest_manifest_file();
 
     scan_current_directory();
 
@@ -803,7 +771,7 @@ static void check_filesystem(void)
     {
     
     if (GetSystemLanguage() == 2)
-        { // if console language is french
+        {
             set_status_text("mscorlib.pe manquant!", false);
         } else
         {
@@ -813,7 +781,7 @@ static void check_filesystem(void)
     else if (browserItemCount <= 0)
     {
         if (GetSystemLanguage() == 2)
-        { // if console language is french
+        {
             set_status_text("Aucune app ou dossier trouvé", false);
         } else
         {
@@ -821,10 +789,6 @@ static void check_filesystem(void)
         }
     }
 }
-
-// ------------------------------------------------------------
-// Drawing helpers
-// ------------------------------------------------------------
 
 static void draw_text(const char* text, float x, float y, float scale, u32 color)
 {
@@ -876,7 +840,7 @@ static void draw_status_line(const char* label, bool ok, float y)
 
     draw_text(label, 30, y, 0.45f, labelColor);
     if (GetSystemLanguage() == 2)
-    { // if console language is french
+    {
         draw_text(ok ? "OK" : "MANQUANT", 310, y, 0.45f, okColor);
     }
     else
@@ -938,7 +902,7 @@ static void draw_browser_list(void)
     if (browserItemCount <= 0)
     {
         if (GetSystemLanguage() == 2)
-        { // if console language is french
+        {
             draw_text_centered("Aucun dossier ou .pe trouvé", 320, 92, 0.52f, disabled);
             draw_text_centered("Mettez les apps dans sdmc:/ReSharp3DS", 320, 120, 0.42f, muted);
         } else
@@ -1061,7 +1025,7 @@ static void draw_browser_list(void)
     }
 
     if (GetSystemLanguage() == 2)
-    { // if console language is french
+    {
         draw_text("X: rafraichir", 20, 220, 0.38f, muted);
     } else
     {
@@ -1069,10 +1033,6 @@ static void draw_browser_list(void)
     }
 
 }
-
-// ------------------------------------------------------------
-// Init / render
-// ------------------------------------------------------------
 
 static void init_graphics_once(void)
 {
@@ -1114,20 +1074,19 @@ void run_gui(void)
 
     C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
 
-    // Top screen
     C2D_TargetClear(topScreen, bgTop);
     C2D_SceneBegin(topScreen);
 
-    C2D_DrawRectSolid(0, 0, 0, 400, 42, headerColor);
+    C2D_DrawRectSolid(0, 0, 0, 400, 30, headerColor);
 
-    draw_text("ReSharp3DS Runtime", 18, 9, 0.62f, white);
-    draw_text(APP_VERSION, 300, 12, 0.45f, C2D_Color32(230, 220, 255, 255));
+    draw_text("ReSharp3DS Loader", 16, 6, 0.58f, white);
+    draw_text(APP_VERSION, 350, 8, 0.42f, C2D_Color32(230, 220, 255, 255));
 
     const char* message = " ";
 
 if(GetSystemLanguage() == 2)
-        { // if console language is french
-            message = "Supporter le Projet - github.com/saysaa/ReSharp3DS";
+        {
+            message = "Supporter le projet : github.com/saysaa/ReSharp3DS";
         }
         else
         {
@@ -1136,46 +1095,45 @@ if(GetSystemLanguage() == 2)
     draw_text_centered(
         message,
         400,
-        51,
+        59,
         0.45f,
         cyan
     );
 
-    C2D_DrawRectSolid(18, 78, 0, 364, 112, cardColor);
-    C2D_DrawRectSolid(18, 78, 0, 4, 112, headerColor);
+    C2D_DrawRectSolid(18, 94, 0, 364, 112, cardColor);
+    C2D_DrawRectSolid(18, 94, 0, 4, 112, headerColor);
 
     if (GetSystemLanguage() == 2)
-    { // if console language is french
-        draw_text("Verification de l'integrité", 32, 90, 0.55f, white);
+    {
+        draw_text("Verification de l'integrité", 32, 106, 0.55f, white);
     } else
     {
-        draw_text("Integrity Check", 32, 90, 0.55f, white);
+        draw_text("Integrity Check", 32, 106, 0.55f, white);
     }
 
     if(GetSystemLanguage() == 2)
-    { // if console language is french
-        draw_status_line("Dossier - :sdmc/ReSharp3DS", folderFound, 120);
-        draw_status_line("mscorlib.pe", mscorlibFound, 143);
-        draw_status_line("Explorateur", browserItemCount > 0, 166);
+    {
+        draw_status_line("Folder - :sdmc/ReSharp3DS", folderFound, 138);
+        draw_status_line("mscorlib.pe", mscorlibFound, 161);
+        draw_status_line("Explorer", browserItemCount > 0, 184);
     } else
     {
-        draw_status_line("Folder - :sdmc/ReSharp3DS", folderFound, 120);
-        draw_status_line("mscorlib.pe", mscorlibFound, 143);
-        draw_status_line("Explorer", browserItemCount > 0, 166);
+        draw_status_line("Folder - :sdmc/ReSharp3DS", folderFound, 138);
+        draw_status_line("mscorlib.pe", mscorlibFound, 161);
+        draw_status_line("Explorer", browserItemCount > 0, 184);
     }
 
 
     draw_text_centered(
         statusText,
         400,
-        207,
+        216,
         0.43f,
         canLaunch
         ? C2D_Color32(100, 240, 140, 255)
         : C2D_Color32(245, 190, 90, 255)
     );
 
-    // Bottom screen
     C2D_TargetClear(bottomScreen, bgBottom);
     C2D_SceneBegin(bottomScreen);
 
@@ -1184,10 +1142,6 @@ if(GetSystemLanguage() == 2)
     C3D_FrameEnd(0);
 
 }
-
-// ------------------------------------------------------------
-// Public GUI API
-// ------------------------------------------------------------
 
 bool gui_handle_touch(int x, int y)
 {
@@ -1198,7 +1152,6 @@ bool gui_handle_touch(int x, int y)
         return false;
     }
 
-    // Touch scroll shortcuts on the right edge.
     if (x >= 292 && x <= 319 && y >= 55 && y < 115)
     {
         gui_move_selection(-1);
@@ -1211,7 +1164,6 @@ bool gui_handle_touch(int x, int y)
         return false;
     }
 
-    // Browser rows on the bottom screen.
     const int listX = 16;
     const int listY = 55;
     const int listWidth = 288;
@@ -1233,14 +1185,9 @@ bool gui_handle_touch(int x, int y)
         update_selected_app_path();
         canLaunch = mscorlibFound && selected_item_is_app();
 
-        // Let main.cpp call gui_can_launch().
-        // If the selected item is a folder, gui_can_launch() will open it.
-        // If it is a .pe app, gui_can_launch() will allow launch.
         return true;
     }
 
-    // Small touch shortcut over the bottom help line.
-    // This matches the "X: refresh" action.
     if (x >= 12 && x <= 130 && y >= 210 && y <= 239)
     {
         gui_refresh_files();
@@ -1287,7 +1234,7 @@ bool gui_can_launch(void)
     {
         canLaunch = false;
         if (GetSystemLanguage() == 2)
-        { // if console language is french
+        {
             set_status_text("mscorlib.pe manquant!", false);
         } else
         {
@@ -1300,7 +1247,7 @@ bool gui_can_launch(void)
     {
         canLaunch = false;
         if (GetSystemLanguage() == 2)
-        { // if console language is french
+        {
             set_status_text("Aucun dossier ou .pe trouvé", false);
         } else
         {
