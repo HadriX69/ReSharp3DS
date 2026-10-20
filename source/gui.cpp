@@ -68,7 +68,7 @@ static bool statusTextTemporary = false;
 static void draw_text(const char* text, float x, float y, float scale, u32 color);
 static void draw_text_centered(const char* text, float screenWidth, float y, float scale, u32 color);
 
-AppLanguage detect_system_language(void) {
+static AppLanguage detect_system_language(void) {
     u8 system_lang = CFG_LANGUAGE_EN;
     CFGU_GetSystemLanguage(&system_lang);
 
@@ -80,6 +80,8 @@ AppLanguage detect_system_language(void) {
     }
 }
 
+// Detect the system language
+AppLanguage current_lang = LANG_EN;
 
 
 static int GetSystemLanguage()
@@ -95,8 +97,6 @@ static int GetSystemLanguage()
 
     return (int)language;
 }
-
-AppLanguage current_lang = detect_system_language();
 
 static void set_status_text(const char* text, bool temporary)
 {
@@ -1025,6 +1025,7 @@ static void init_graphics_once(void)
     C2D_Prepare();
 
     cfguInit();
+	current_lang = detect_system_language();
 
     topScreen = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
     bottomScreen = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_LEFT);

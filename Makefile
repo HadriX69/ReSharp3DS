@@ -204,15 +204,16 @@ ifneq ($(ROMFS),)
 	export _3DSXFLAGS += --romfs=$(CURDIR)/$(ROMFS)
 endif
 
-.PHONY: all clean distclean info
-all: info $(CODEGEN_OUTPUTS) $(BUILD) $(GFXBUILD) $(DEPSDIR) $(ROMFS_T3XFILES) $(T3XHFILES)
+.PHONY: all clean distclean info codegen
+all: info $(BUILD) $(GFXBUILD) $(DEPSDIR) $(ROMFS_T3XFILES) $(T3XHFILES)
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile $(OUTPUT).3dsx
 
 YAML_FILES := $(wildcard locale/*.yaml)
 
 
-$(CODEGEN_OUTPUTS): codegen.py $(shell find locale)
-	@$(PYTHON) $(TOPDIR)/codegen.py
+codegen: codegen.py $(shell find locale)
+	@echo Generating codegen files...
+	@python $(TOPDIR)/codegen.py
 
 # Ensure that the compiler knows that C source files depend on the generated files
 #$(OFILES_SOURCES) : $(CODEGEN_OUTPUTS)
