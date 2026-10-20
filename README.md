@@ -66,6 +66,14 @@ If a `.pe` file is declared in `manifest.json`, the launcher can display the man
 
 ---
 
+## Compile Homebrew
+
+For compile ReSharp3DS : `make codegen && make`
+
+Clean ReSharp3DS : `make clean && make distclean`
+
+---
+
 ## Troubleshooting
 
 If a file is missing or incorrectly placed, the program will display an error:
