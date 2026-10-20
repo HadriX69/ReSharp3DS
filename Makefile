@@ -33,7 +33,7 @@ TARGET      := ReSharp3DS
 BUILD_TYPE ?= release
 
 BUILD       := build-$(BUILD_TYPE)
-SOURCES     := source source/clr
+SOURCES     := source source/clr codegen
 DATA        := data
 INCLUDES    := include source/clr
 GRAPHICS    := gfx
@@ -124,6 +124,8 @@ LIBS := -lcitro2d -lcitro3d -lctru -lm
 
 LIBDIRS := $(CTRULIB)
 
+CODEGEN_OUTPUTS	= codegen/lang_strings.h codegen/lang_strings.c
+
 #---------------------------------------------------------------------------------
 # Nothing below normally needs editing
 #---------------------------------------------------------------------------------
@@ -203,9 +205,17 @@ ifneq ($(ROMFS),)
 endif
 
 .PHONY: all clean distclean info
+all: info $(CODEGEN_OUTPUTS) $(BUILD) $(GFXBUILD) $(DEPSDIR) $(ROMFS_T3XFILES) $(T3XHFILES)
+	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile $(OUTPUT).3dsx
 
-all: info $(BUILD) $(GFXBUILD) $(DEPSDIR) $(ROMFS_T3XFILES) $(T3XHFILES)
-	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
+YAML_FILES := $(wildcard locale/*.yaml)
+
+
+$(CODEGEN_OUTPUTS): codegen.py $(shell find locale)
+	@$(PYTHON) $(TOPDIR)/codegen.py
+
+# Ensure that the compiler knows that C source files depend on the generated files
+#$(OFILES_SOURCES) : $(CODEGEN_OUTPUTS)
 
 info:
 	@echo "Building $(TARGET)"
@@ -236,6 +246,7 @@ distclean:
 	@echo distclean ...
 	@rm -fr build build-dev build-beta build-release
 	@rm -f $(TARGET).3dsx $(TARGET).smdh $(TARGET).elf $(TARGET).map
+	@rm -f $(TOPDIR)/codegen/lang_strings.h $(TOPDIR)/codegen/lang_strings.c
 
 $(GFXBUILD)/%.t3x $(BUILD)/%.h : %.t3s
 	@echo $(notdir $<)

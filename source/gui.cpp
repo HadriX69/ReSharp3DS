@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "../codegen/lang_strings.h"
+
 static const char* APP_VERSION = "v2.2.7";
 
 static const char* ROOT_PATH = "sdmc:/ReSharp3DS";
@@ -66,6 +68,20 @@ static bool statusTextTemporary = false;
 static void draw_text(const char* text, float x, float y, float scale, u32 color);
 static void draw_text_centered(const char* text, float screenWidth, float y, float scale, u32 color);
 
+AppLanguage detect_system_language(void) {
+    u8 system_lang = CFG_LANGUAGE_EN;
+    CFGU_GetSystemLanguage(&system_lang);
+
+    switch (system_lang) {
+    case CFG_LANGUAGE_FR:
+        return LANG_FR;
+    default:
+        return LANG_EN; // default
+    }
+}
+
+
+
 static int GetSystemLanguage()
 {
     u8 language = 0;
@@ -79,6 +95,8 @@ static int GetSystemLanguage()
 
     return (int)language;
 }
+
+AppLanguage current_lang = detect_system_language();
 
 static void set_status_text(const char* text, bool temporary)
 {
@@ -121,7 +139,7 @@ static bool ensure_runtime_files(void)
     }
 
     printf("[RUNTIME] mscorlib.pe missing, downloading...\n");
-    set_status_text("Restoring mscorlib.pe...", false);
+    set_status_text(STRINGS[current_lang].str_mscorlib_restoring, false);
 
     bool ok = DownloadFile(
         MSCORLIB_URL,
@@ -141,19 +159,19 @@ static bool ensure_runtime_files(void)
     if (!ok)
     {
         printf("[RUNTIME] mscorlib.pe restore failed\n");
-        set_status_text("mscorlib.pe restore failed!", true);
+        set_status_text(STRINGS[current_lang].str_mscorlib_failed_restore, true);
         return false;
     }
 
     if (!FileExists(MSCORLIB_PATH))
     {
         printf("[RUNTIME] mscorlib.pe downloaded but file not found\n");
-        set_status_text("mscorlib.pe restore failed!", true);
+        set_status_text(STRINGS[current_lang].str_mscorlib_failed_restore, true);
         return false;
     }
 
     printf("[RUNTIME] mscorlib.pe restored\n");
-    set_status_text("mscorlib.pe restored!", true);
+    set_status_text(STRINGS[current_lang].str_mscorlib_restored, true);
 
     return true;
 }
@@ -612,13 +630,7 @@ static void scan_current_directory(void)
 
     if (!dir)
     {
-        if(GetSystemLanguage() == 2)
-        {
-            set_status_text("Impossible d'ouvrir le dossier", true);
-        } else
-        {
-            set_status_text("Cannot open folder", true);
-        }
+        set_status_text(STRINGS[current_lang].str_file_open_failed, true);
         return;
     }
 
@@ -769,24 +781,11 @@ static void check_filesystem(void)
 
     if (!mscorlibFound)
     {
-    
-    if (GetSystemLanguage() == 2)
-        {
-            set_status_text("mscorlib.pe manquant!", false);
-        } else
-        {
-            set_status_text("Missing mscorlib.pe!", false);
-        }
+        set_status_text(STRINGS[current_lang].str_mscorlib_not_found, false);
     }
     else if (browserItemCount <= 0)
     {
-        if (GetSystemLanguage() == 2)
-        {
-            set_status_text("Aucune app ou dossier trouvé", false);
-        } else
-        {
-            set_status_text("No apps or folders found", false);
-        }
+        set_status_text(STRINGS[current_lang].str_apps_not_found, false);
     }
 }
 
@@ -839,14 +838,7 @@ static void draw_status_line(const char* label, bool ok, float y)
         : C2D_Color32(240, 90, 90, 255);
 
     draw_text(label, 30, y, 0.45f, labelColor);
-    if (GetSystemLanguage() == 2)
-    {
-        draw_text(ok ? "OK" : "MANQUANT", 310, y, 0.45f, okColor);
-    }
-    else
-    {
-        draw_text(ok ? "OK" : "MISSING", 310, y, 0.45f, okColor);
-    }
+    draw_text(ok ? STRINGS[current_lang].str_ok : STRINGS[current_lang].str_missing, 310, y, 0.45f, okColor);
 }
 
 static void make_short_path(const char* path, char* out, size_t outSize)
@@ -901,16 +893,8 @@ static void draw_browser_list(void)
 
     if (browserItemCount <= 0)
     {
-        if (GetSystemLanguage() == 2)
-        {
-            draw_text_centered("Aucun dossier ou .pe trouvé", 320, 92, 0.52f, disabled);
-            draw_text_centered("Mettez les apps dans sdmc:/ReSharp3DS", 320, 120, 0.42f, muted);
-        } else
-        {
-            draw_text_centered("No folder or .pe found", 320, 92, 0.52f, disabled);
-            draw_text_centered("Put apps in sdmc:/ReSharp3DS", 320, 120, 0.42f, muted);
-        }
-
+        draw_text_centered(STRINGS[current_lang].str_no_pe_folders_found, 320, 92, 0.52f, disabled);
+        draw_text_centered(STRINGS[current_lang].str_no_pe_folders_found_advice, 320, 120, 0.42f, muted);
         return;
     }
 
@@ -1024,13 +1008,8 @@ static void draw_browser_list(void)
         }
     }
 
-    if (GetSystemLanguage() == 2)
-    {
-        draw_text("X: rafraichir", 20, 220, 0.38f, muted);
-    } else
-    {
-        draw_text("X: refresh", 20, 220, 0.38f, muted);
-    }
+   
+   draw_text(STRINGS[current_lang].str_refresh, 20, 220, 0.38f, muted);
 
 }
 
@@ -1082,16 +1061,8 @@ void run_gui(void)
     draw_text("ReSharp3DS Loader", 16, 6, 0.58f, white);
     draw_text(APP_VERSION, 350, 8, 0.42f, C2D_Color32(230, 220, 255, 255));
 
-    const char* message = " ";
-
-if(GetSystemLanguage() == 2)
-        {
-            message = "Supporter le projet : github.com/saysaa/ReSharp3DS";
-        }
-        else
-        {
-            message = "Support project : github.com/saysaa/ReSharp3DS";
-        }
+    const char* message = STRINGS[current_lang].str_project_support;
+    //message = STRINGS[current_lang].str_project_support;
     draw_text_centered(
         message,
         400,
@@ -1103,25 +1074,12 @@ if(GetSystemLanguage() == 2)
     C2D_DrawRectSolid(18, 94, 0, 364, 112, cardColor);
     C2D_DrawRectSolid(18, 94, 0, 4, 112, headerColor);
 
-    if (GetSystemLanguage() == 2)
-    {
-        draw_text("Verification de l'integrité", 32, 106, 0.55f, white);
-    } else
-    {
-        draw_text("Integrity Check", 32, 106, 0.55f, white);
-    }
+    draw_text(STRINGS[current_lang].str_check, 32, 106, 0.55f, white);
 
-    if(GetSystemLanguage() == 2)
-    {
-        draw_status_line("Folder - :sdmc/ReSharp3DS", folderFound, 138);
-        draw_status_line("mscorlib.pe", mscorlibFound, 161);
-        draw_status_line("Explorer", browserItemCount > 0, 184);
-    } else
-    {
-        draw_status_line("Folder - :sdmc/ReSharp3DS", folderFound, 138);
-        draw_status_line("mscorlib.pe", mscorlibFound, 161);
-        draw_status_line("Explorer", browserItemCount > 0, 184);
-    }
+
+    draw_status_line(STRINGS[current_lang].str_folder_found, folderFound, 138);
+    draw_status_line(STRINGS[current_lang].str_mscorlib_found, mscorlibFound, 161);
+    draw_status_line(STRINGS[current_lang].str_browser_item_count, browserItemCount > 0, 184);
 
 
     draw_text_centered(
@@ -1233,26 +1191,15 @@ bool gui_can_launch(void)
     if (!mscorlibFound)
     {
         canLaunch = false;
-        if (GetSystemLanguage() == 2)
-        {
-            set_status_text("mscorlib.pe manquant!", false);
-        } else
-        {
-            set_status_text("Missing mscorlib.pe!", false);
-        }
+        
+        set_status_text(STRINGS[current_lang].str_mscorlib_not_found, false);
         return false;
     }
 
     if (browserItemCount <= 0)
     {
         canLaunch = false;
-        if (GetSystemLanguage() == 2)
-        {
-            set_status_text("Aucun dossier ou .pe trouvé", false);
-        } else
-        {
-            set_status_text("No apps or folders found", false);
-        }
+        set_status_text(STRINGS[current_lang].str_no_pe_folders_found, false);
         return false;
     }
 
