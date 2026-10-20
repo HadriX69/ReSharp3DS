@@ -210,10 +210,11 @@ all: info $(BUILD) $(GFXBUILD) $(DEPSDIR) $(ROMFS_T3XFILES) $(T3XHFILES)
 
 YAML_FILES := $(wildcard locale/*.yaml)
 
+PYTHON ?= python3
 
 codegen: codegen.py $(shell find locale)
 	@echo Generating codegen files...
-	@python $(TOPDIR)/codegen.py
+	@$(PYTHON) $(TOPDIR)/codegen.py
 
 # Ensure that the compiler knows that C source files depend on the generated files
 #$(OFILES_SOURCES) : $(CODEGEN_OUTPUTS)
