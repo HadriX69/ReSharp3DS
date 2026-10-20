@@ -2927,6 +2927,11 @@ int main()
             gui_refresh_files();
         }
 
+        if (kDown & KEY_B)
+        {
+            gui_close_credits();
+        }
+
         if (kDown & KEY_TOUCH)
         {
             touchPosition touch;

@@ -13,7 +13,7 @@
 
 #include "../codegen/lang_strings.h"
 
-static const char* APP_VERSION = "v2.2.7";
+static const char* APP_VERSION = "v2.3.6";
 
 static const char* ROOT_PATH = "sdmc:/ReSharp3DS";
 static const char* BIN_PATH = "sdmc:/ReSharp3DS/bin";
@@ -51,6 +51,7 @@ static bool initialized = false;
 static bool folderFound = false;
 static bool mscorlibFound = false;
 static bool canLaunch = false;
+static bool creditsVisible = false;
 
 static BrowserItem browserItems[MAX_BROWSER_ITEMS];
 static int browserItemCount = 0;
@@ -830,6 +831,32 @@ static void draw_text_centered(const char* text, float screenWidth, float y, flo
     );
 }
 
+static void get_credits_button_dimensions(float* width, float* height)
+{
+    C2D_Text creditsText;
+    C2D_TextParse(&creditsText, textBuf, STRINGS[current_lang].str_credits_button);
+    C2D_TextOptimize(&creditsText);
+    C2D_TextGetDimensions(&creditsText, 0.38f, 0.38f, width, height);
+}
+
+static void draw_credits_button(u32 foreground)
+{
+    float creditsWidth = 0.0f;
+    float creditsHeight = 0.0f;
+    const float creditsScale = 0.38f;
+
+    get_credits_button_dimensions(&creditsWidth, &creditsHeight);
+
+    float creditsX = 320.0f - 16.0f - creditsWidth;
+    draw_text(
+        STRINGS[current_lang].str_credits_button,
+        creditsX,
+        218 + (14 - creditsHeight) / 2.0f,
+        creditsScale,
+        foreground
+    );
+}
+
 static void draw_status_line(const char* label, bool ok, float y)
 {
     u32 labelColor = C2D_Color32(190, 190, 205, 255);
@@ -895,6 +922,8 @@ static void draw_browser_list(void)
     {
         draw_text_centered(STRINGS[current_lang].str_no_pe_folders_found, 320, 92, 0.52f, disabled);
         draw_text_centered(STRINGS[current_lang].str_no_pe_folders_found_advice, 320, 120, 0.42f, muted);
+        draw_text(STRINGS[current_lang].str_refresh, 20, 220, 0.38f, muted);
+        draw_credits_button(muted);
         return;
     }
 
@@ -1008,8 +1037,8 @@ static void draw_browser_list(void)
         }
     }
 
-   
-   draw_text(STRINGS[current_lang].str_refresh, 20, 220, 0.38f, muted);
+    draw_text(STRINGS[current_lang].str_refresh, 20, 220, 0.38f, muted);
+    draw_credits_button(muted);
 
 }
 
@@ -1061,32 +1090,20 @@ void run_gui(void)
 
     draw_text("ReSharp3DS Loader", 16, 6, 0.58f, white);
     draw_text(APP_VERSION, 350, 8, 0.42f, C2D_Color32(230, 220, 255, 255));
+    const float checkPanelY = 66.0f;
+    C2D_DrawRectSolid(18, checkPanelY, 0, 364, 112, cardColor);
+    C2D_DrawRectSolid(18, checkPanelY, 0, 4, 112, headerColor);
 
-    const char* message = STRINGS[current_lang].str_project_support;
-    //message = STRINGS[current_lang].str_project_support;
-    draw_text_centered(
-        message,
-        400,
-        59,
-        0.45f,
-        cyan
-    );
-
-    C2D_DrawRectSolid(18, 94, 0, 364, 112, cardColor);
-    C2D_DrawRectSolid(18, 94, 0, 4, 112, headerColor);
-
-    draw_text(STRINGS[current_lang].str_check, 32, 106, 0.55f, white);
-
-
-    draw_status_line(STRINGS[current_lang].str_folder_found, folderFound, 138);
-    draw_status_line(STRINGS[current_lang].str_mscorlib_found, mscorlibFound, 161);
-    draw_status_line(STRINGS[current_lang].str_browser_item_count, browserItemCount > 0, 184);
+    draw_text_centered(STRINGS[current_lang].str_check, 400, checkPanelY + 12, 0.55f, white);
+    draw_status_line(STRINGS[current_lang].str_folder_found, folderFound, checkPanelY + 44);
+    draw_status_line(STRINGS[current_lang].str_mscorlib_found, mscorlibFound, checkPanelY + 67);
+    draw_status_line(STRINGS[current_lang].str_browser_item_count, browserItemCount > 0, checkPanelY + 90);
 
 
     draw_text_centered(
         statusText,
         400,
-        216,
+        188,
         0.43f,
         canLaunch
         ? C2D_Color32(100, 240, 140, 255)
@@ -1098,6 +1115,21 @@ void run_gui(void)
 
     draw_browser_list();
 
+    if (creditsVisible)
+    {
+        u32 panel = C2D_Color32(22, 22, 34, 255);
+        u32 accent = C2D_Color32(92, 54, 190, 255);
+        u32 muted = C2D_Color32(175, 175, 195, 255);
+
+        C2D_DrawRectSolid(16, 34, 0, 288, 176, panel);
+        C2D_DrawRectSolid(16, 34, 0, 288, 4, accent);
+        draw_text(STRINGS[current_lang].str_credits_title, 32, 48, 0.62f, white);
+        draw_text_centered(STRINGS[current_lang].str_credits_creator, 320, 82, 0.42f, muted);
+        draw_text_centered(STRINGS[current_lang].str_credits_developer, 320, 108, 0.42f, muted);
+        draw_text_centered(STRINGS[current_lang].str_credits_project_link, 320, 142, 0.40f, cyan);
+        draw_text_centered(STRINGS[current_lang].str_credits_close, 320, 183, 0.38f, cyan);
+    }
+
     C3D_FrameEnd(0);
 
 }
@@ -1105,6 +1137,33 @@ void run_gui(void)
 bool gui_handle_touch(int x, int y)
 {
     init_graphics_once();
+
+    if (creditsVisible)
+    {
+        if (x >= 16 && x <= 304 && y >= 176 && y <= 210)
+        {
+            creditsVisible = false;
+        }
+        return false;
+    }
+
+    if (x >= 12 && x <= 130 && y >= 210 && y <= 239)
+    {
+        gui_refresh_files();
+        return false;
+    }
+
+    float creditsWidth = 0.0f;
+    float creditsHeight = 0.0f;
+    get_credits_button_dimensions(&creditsWidth, &creditsHeight);
+    (void)creditsHeight;
+    int creditsLeft = (int)(320.0f - 16.0f - creditsWidth);
+
+    if (x >= creditsLeft && x <= 304 && y >= 210 && y <= 239)
+    {
+        creditsVisible = true;
+        return false;
+    }
 
     if (browserItemCount <= 0)
     {
@@ -1147,13 +1206,12 @@ bool gui_handle_touch(int x, int y)
         return true;
     }
 
-    if (x >= 12 && x <= 130 && y >= 210 && y <= 239)
-    {
-        gui_refresh_files();
-        return false;
-    }
-
     return false;
+}
+
+void gui_close_credits(void)
+{
+    creditsVisible = false;
 }
 
 void gui_move_selection(int direction)

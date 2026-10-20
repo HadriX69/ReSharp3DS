@@ -12,6 +12,7 @@ void gui_shutdown(void);
 
 void gui_move_selection(int direction);
 void gui_refresh_files(void);
+void gui_close_credits(void);
 bool gui_handle_touch(int x, int y);
 const char* gui_get_selected_app_path(void);
 

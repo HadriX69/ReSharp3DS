@@ -20,7 +20,12 @@ typedef struct {
     const char* str_no_pe_folders_found;
     const char* str_no_pe_folders_found_advice;
     const char* str_refresh;
-    const char* str_project_support;
+    const char* str_credits_button;
+    const char* str_credits_title;
+    const char* str_credits_creator;
+    const char* str_credits_developer;
+    const char* str_credits_project_link;
+    const char* str_credits_close;
     const char* str_check;
     const char* str_folder_found;
     const char* str_mscorlib_found;
