@@ -13,7 +13,7 @@
 
 #include "../codegen/lang_strings.h"
 
-static const char* APP_VERSION = "v2.3.6";
+static const char* APP_VERSION = RESHARP3DS_VERSION;
 
 static const char* ROOT_PATH = "sdmc:/ReSharp3DS";
 static const char* BIN_PATH = "sdmc:/ReSharp3DS/bin";

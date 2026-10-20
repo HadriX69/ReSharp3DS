@@ -1,0 +1,1517 @@
+         w __deregister_frame_info
+         w __register_frame_info
+         w userAppExit
+         w userAppInit
+00000000 00000802 B __ctru_dev_utf16_buf
+00000000 A __sync_synchronize
+00000000 b _TLS_MODULE_BASE_
+00000000 a shift
+00000000 a shift
+00000804 00000401 B __ctru_dev_path_buf
+00100000 A __start__
+00100000 T _start
+00100008 T __service_ptr
+0010000c T __apt_appid
+00100010 T __heap_size
+00100014 T __linear_heap_size
+00100018 T __system_arglist
+0010001c T __system_runflags
+00100020 t startup
+00100058 t ClearMem
+0010006c t ClrLoop
+00100094 T _init
+001000ac T __aeabi_uidiv
+001000ac 000001ec T __udivsi3
+001000ac t .udivsi3_skip_div0_test
+00100298 00000020 T __aeabi_uidivmod
+001002b8 T __aeabi_idiv
+001002b8 00000220 T __divsi3
+001002c0 t .divsi3_skip_div0_test
+001004d8 00000020 T __aeabi_idivmod
+001004f8 00000004 W __aeabi_idiv0
+001004f8 00000004 W __aeabi_ldiv0
+001004fc T __aeabi_drsub
+00100504 000002b0 T __aeabi_dsub
+00100504 000002b0 T __subdf3
+00100508 000002ac T __adddf3
+00100508 000002ac T __aeabi_dadd
+001007b4 00000024 T __aeabi_ui2d
+001007b4 00000024 T __floatunsidf
+001007d8 00000028 T __aeabi_i2d
+001007d8 00000028 T __floatsidf
+00100800 00000048 T __aeabi_f2d
+00100800 00000048 T __extendsfdf2
+00100848 00000074 T __aeabi_ul2d
+00100848 00000074 T __floatundidf
+0010085c 00000060 T __aeabi_l2d
+0010085c 00000060 T __floatdidf
+001008bc T __aeabi_ldivmod
+00100990 T __aeabi_uldivmod
+001009e8 00000390 T strcmp
+00100d70 t __do_global_dtors_aux
+00100dc0 t frame_dummy
+00100dec 000000dc t add_browser_item(char const*, char const*, BrowserItemType)
+00100ec8 00000070 t str_equals_ignore_case(char const*, char const*)
+00100f38 000000a4 t draw_text_centered(char const*, float, float, float, unsigned long)
+00100fdc 0000007c t set_current_directory(char const*)
+00101058 00000118 t copy_json_string_value(char const*, char const*, char*, unsigned int) [clone .part.0]
+00101170 00000068 t update_selected_app_path()
+001011d8 0000014c t draw_status_line(char const*, bool, float)
+00101324 0000010c t draw_credits_button(unsigned long) [clone .constprop.0]
+00101430 00000548 t draw_browser_list()
+00101978 000007ac t scan_current_directory()
+00102124 0000032c t check_filesystem()
+00102450 00000094 t init_graphics_once() [clone .part.0]
+001024e4 000004b4 T run_gui
+00102998 00000014 T gui_close_credits
+001029ac 00000170 T gui_move_selection
+00102b1c 00000224 T gui_handle_touch
+00102d40 00000004 T gui_refresh_files
+00102d44 0000016c T gui_can_launch
+00102eb0 00000054 T gui_get_selected_app_path
+00102f04 00000050 T gui_shutdown
+00102f54 00000008 t Native_Nop(CLR_RT_StackFrame&)
+00102f5c 00000030 t Native_RandomSeed(CLR_RT_StackFrame&)
+00102f8c 00000028 t Native_GraphicsSetTarget(CLR_RT_StackFrame&)
+00102fb4 00000018 t Native_RuntimeExit(CLR_RT_StackFrame&)
+00102fcc 0000001c t Native_RuntimeRestart(CLR_RT_StackFrame&)
+00102fe8 0000001c t Native_RuntimeReturnToLauncher(CLR_RT_StackFrame&)
+00103004 00000018 t Native_Yield(CLR_RT_StackFrame&)
+0010301c 00000010 t Native_Clear(CLR_RT_StackFrame&)
+0010302c 0000003c t WaitExit()
+00103068 00000044 t Native_AudioSetMusicLoop(CLR_RT_StackFrame&)
+001030ac 00000024 t Native_WriteLineInt(CLR_RT_StackFrame&)
+001030d0 00000024 t Native_WriteInt(CLR_RT_StackFrame&)
+001030f4 00000034 t Native_GraphicsPresent(CLR_RT_StackFrame&)
+00103128 00000030 t ReadBmpU32LE(__sFILE*)
+00103128 00000030 t ReadU32LE(__sFILE*)
+00103158 00000194 t LoadAssembly(char const*)
+001032ec 0000001c t Native_RuntimeGetFps(CLR_RT_StackFrame&)
+00103308 00000038 t Native_AudioIsMusicPlaying(CLR_RT_StackFrame&)
+00103340 0000004c t Native_AudioIsPlaying(CLR_RT_StackFrame&)
+0010338c 0000001c t Native_CirclePadY(CLR_RT_StackFrame&)
+001033a8 0000001c t Native_CirclePadX(CLR_RT_StackFrame&)
+001033c4 0000001c t Native_TouchY(CLR_RT_StackFrame&)
+001033e0 0000001c t Native_TouchX(CLR_RT_StackFrame&)
+001033fc 00000024 t Native_TouchIsPressed(CLR_RT_StackFrame&)
+00103420 00000024 t Native_IsRightPressedOnce(CLR_RT_StackFrame&)
+00103444 00000024 t Native_IsLeftPressedOnce(CLR_RT_StackFrame&)
+00103468 00000020 t Native_IsDownPressedOnce(CLR_RT_StackFrame&)
+00103488 00000024 t Native_IsUpPressedOnce(CLR_RT_StackFrame&)
+001034ac 00000020 t Native_IsRPressedOnce(CLR_RT_StackFrame&)
+001034cc 00000024 t Native_IsLPressedOnce(CLR_RT_StackFrame&)
+001034f0 00000024 t Native_IsYPressedOnce(CLR_RT_StackFrame&)
+00103514 00000024 t Native_IsXPressedOnce(CLR_RT_StackFrame&)
+00103538 00000024 t Native_IsBPressedOnce(CLR_RT_StackFrame&)
+0010355c 00000020 t Native_IsAPressedOnce(CLR_RT_StackFrame&)
+0010357c 00000024 t Native_IsSelectPressedOnce(CLR_RT_StackFrame&)
+001035a0 00000024 t Native_IsStartPressedOnce(CLR_RT_StackFrame&)
+001035c4 00000024 t Native_IsRightPressed(CLR_RT_StackFrame&)
+001035e8 00000024 t Native_IsLeftPressed(CLR_RT_StackFrame&)
+0010360c 00000020 t Native_IsDownPressed(CLR_RT_StackFrame&)
+0010362c 00000024 t Native_IsUpPressed(CLR_RT_StackFrame&)
+00103650 00000020 t Native_IsRPressed(CLR_RT_StackFrame&)
+00103670 00000024 t Native_IsLPressed(CLR_RT_StackFrame&)
+00103694 00000024 t Native_IsYPressed(CLR_RT_StackFrame&)
+001036b8 00000024 t Native_IsXPressed(CLR_RT_StackFrame&)
+001036dc 00000024 t Native_IsBPressed(CLR_RT_StackFrame&)
+00103700 00000020 t Native_IsAPressed(CLR_RT_StackFrame&)
+00103720 00000024 t Native_IsSelectPressed(CLR_RT_StackFrame&)
+00103744 00000024 t Native_IsStartPressed(CLR_RT_StackFrame&)
+00103768 0000000c t Native_RuntimeGetVersion(CLR_RT_StackFrame&)
+00103774 0000000c t Native_AppGetName(CLR_RT_StackFrame&)
+00103780 0000000c t Native_AppGetDirectory(CLR_RT_StackFrame&)
+0010378c 0000000c t Native_AppGetPath(CLR_RT_StackFrame&)
+00103798 000000b0 t Native_RandomNext(CLR_RT_StackFrame&)
+00103848 0000002c t Native_TimeSeconds(CLR_RT_StackFrame&)
+00103874 00000020 t Native_TimeMilliseconds(CLR_RT_StackFrame&)
+00103894 000000e4 t AppendRuntimeLog(char const*, char const*)
+00103978 00000020 t Native_SystemGetFreeMemory(CLR_RT_StackFrame&)
+00103998 0000006c t Native_SystemGetBatteryLevel(CLR_RT_StackFrame&)
+00103a04 00000040 t Native_SystemIsNew3DS(CLR_RT_StackFrame&)
+00103a44 00000118 t SetSelectedAppDirectory(char const*)
+00103b5c 00000040 t Native_AudioResumeMusic(CLR_RT_StackFrame&)
+00103b9c 00000040 t Native_AudioPauseMusic(CLR_RT_StackFrame&)
+00103bdc 00000060 t Native_AudioStopMusic(CLR_RT_StackFrame&)
+00103c3c 00000060 t Native_AudioStop(CLR_RT_StackFrame&)
+00103c9c 000000bc t ResolveAppRelativePath(char const*, char*, unsigned int) [clone .constprop.0]
+00103d58 00000048 t Native_WriteLine(CLR_RT_StackFrame&)
+00103da0 00000050 t Native_Write(CLR_RT_StackFrame&)
+00103df0 0000004c t Native_DebugLogFile(CLR_RT_StackFrame&)
+00103e3c 00000088 t ResolveFilePathFromManagedString(CLR_RT_StackFrame&, int, char*, unsigned int) [clone .part.0] [clone .constprop.0]
+00103ec4 00000084 t Native_FileExists(CLR_RT_StackFrame&)
+00103f48 000000d0 t Native_FileReadAllText(CLR_RT_StackFrame&)
+00104018 00000070 t Native_FileGetSize(CLR_RT_StackFrame&)
+00104088 00000084 t Native_DirectoryExists(CLR_RT_StackFrame&)
+0010410c 000000a4 t Native_DirectoryCreate(CLR_RT_StackFrame&)
+001041b0 00000198 t BuildDirectoryList(CLR_RT_StackFrame&, bool)
+00104348 00000008 t Native_DirectoryListFolders(CLR_RT_StackFrame&)
+00104350 00000008 t Native_DirectoryListFiles(CLR_RT_StackFrame&)
+00104358 00000124 t FillRectBottom(int, int, int, int, int) [clone .part.0]
+0010447c 00000054 t Native_GraphicsFillRect(CLR_RT_StackFrame&)
+001044d0 00000048 t Native_GraphicsClear(CLR_RT_StackFrame&)
+00104518 0000006c t ClearBottomBuffers(int) [clone .constprop.0]
+00104584 00000108 t DrawTextBottom(int, int, char const*, int) [clone .part.0]
+0010468c 00000060 t Native_GraphicsDrawText(CLR_RT_StackFrame&)
+001046ec 000000cc t Native_FileWriteAllText(CLR_RT_StackFrame&)
+001047b8 000000ac t PutPixelBottom(int, int, int)
+00104864 000000a8 t Native_GraphicsFillCircle(CLR_RT_StackFrame&)
+0010490c 00000128 t Native_GraphicsDrawCircle(CLR_RT_StackFrame&)
+00104a34 000000c8 t Native_GraphicsDrawLine(CLR_RT_StackFrame&)
+00104afc 000000b0 t Native_GraphicsDrawRect(CLR_RT_StackFrame&)
+00104bac 00000034 t Native_GraphicsDrawPixel(CLR_RT_StackFrame&)
+00104be0 00000098 t AudioShutdown()
+00104c78 0000009c t ConfigureAudioChannel(int, unsigned long, unsigned short)
+00104d14 00000134 t Native_AudioInit(CLR_RT_StackFrame&)
+00104e48 000001f0 t Native_AudioBeep(CLR_RT_StackFrame&)
+00105038 000000a0 t Native_AudioSetMusicVolume(CLR_RT_StackFrame&)
+001050d8 000000a0 t Native_AudioSetSfxVolume(CLR_RT_StackFrame&)
+00105178 000000cc t Native_AudioSetVolume(CLR_RT_StackFrame&)
+00105244 000000d4 t Native_DirectoryDelete(CLR_RT_StackFrame&)
+00105318 000000d4 t Native_FileDelete(CLR_RT_StackFrame&)
+001053ec 00000578 t LoadWavToChannel(char const*, int, bool, tag_ndspWaveBuf&, short*&, unsigned int&, char const*) [clone .part.0] [clone .isra.0]
+00105964 000000c8 t Native_AudioLoop(CLR_RT_StackFrame&)
+00105a2c 000000c0 t Native_AudioPlayWav(CLR_RT_StackFrame&)
+00105aec 00000004 t Native_AudioPlaySfx(CLR_RT_StackFrame&)
+00105af0 000002f0 t Native_GraphicsDrawSpriteTransparent(CLR_RT_StackFrame&)
+00105de0 00000360 t Native_GraphicsDrawBitmap(CLR_RT_StackFrame&)
+00106140 00000004 t Native_GraphicsDrawSprite(CLR_RT_StackFrame&)
+00106144 000003cc t Native_GraphicsDrawSpriteScaled(CLR_RT_StackFrame&)
+00106510 000006e4 T main
+00106bf4 00000004 T platform_get_ticks
+00106bf8 00000004 T nanoCLR_Cleanup
+00106bfc 00000040 T HAL_Time_CurrentTime
+00106c3c 00000004 T HAL_Time_SysTicksToTime
+00106c40 00000004 T Watchdog_Reset
+00106c44 00000004 T RtosYield
+00106c48 00000094 T CLR_Debug::Printf(char const*, ...)
+00106cdc 00000008 T CLR_Messaging::CreateInstance()
+00106ce4 00000008 T CLR_DBG_Debugger::CreateInstance()
+00106cec 00000004 T CLR_RT_HeapBlock_EndPoint::HandlerMethod_Initialize()
+00106cf0 00000004 T CLR_RT_HeapBlock_NativeEventDispatcher::HandlerMethod_Initialize()
+00106cf4 00000004 T CLR_RT_HeapBlock_EndPoint::HandlerMethod_RecoverFromGC()
+00106cf8 00000004 T CLR_RT_HeapBlock_NativeEventDispatcher::HandlerMethod_RecoverFromGC()
+00106cfc 00000004 T CLR_RT_HeapBlock_WeakReference::Relocate()
+00106d00 00000004 T CLR_RT_HeapBlock_WeakReference::RecoverObjects(CLR_RT_DblLinkedList&)
+00106d04 00000004 T CLR_RT_DUMP::METHOD(CLR_RT_MethodDef_Index const&)
+00106d08 00000004 T CLR_RT_DUMP::POST_PROCESS_EXCEPTION(CLR_RT_HeapBlock&)
+00106d0c 00000060 T CLR_SafeSprintf(char*&, unsigned int&, char const*, ...)
+00106d6c 0000003c T HeapLocation
+00106da8 00000090 T nanoCLR_Initialize
+00106e38 00000018 T CLR_HW_Hardware::CreateInstance()
+00106e50 00000004 T CLR_HW_Hardware::PrepareForGC()
+00106e54 00000004 T CLR_HW_Hardware::ProcessActivity()
+00106e58 00000008 T Library_corlib_native_System_Exception::CreateInstance(CLR_RT_HeapBlock&, CLR_RT_TypeDef_Index const&, int, CLR_RT_StackFrame*)
+00106e60 00000008 T Library_corlib_native_System_Exception::CreateInstance(CLR_RT_HeapBlock&, int, CLR_RT_StackFrame*)
+00106e68 00000008 T Library_corlib_native_System_Exception::SetStackTrace(CLR_RT_HeapBlock&, CLR_RT_StackFrame*)
+00106e70 00000634 t DownloadFileInternal(char const*, char const*, int)
+001074a4 00000050 T FileExists
+001074f4 00000088 T EnsureDirectory
+0010757c 00000008 T DownloadFile
+00107584 000000ac T CLR_RT_EventCache::VirtualMethodTable::Initialize()
+00107630 00000050 T CLR_RT_EventCache::VirtualMethodTable::MoveEntryToTop(CLR_RT_EventCache::Link*, unsigned int, unsigned int)
+00107680 0000016c T CLR_RT_EventCache::VirtualMethodTable::FindVirtualMethod(CLR_RT_TypeDef_Index const&, CLR_RT_MethodDef_Index const&, CLR_RT_MethodDef_Index&)
+001077ec 0000008c T CLR_RT_EventCache::EventCache_Initialize()
+00107878 00000078 T CLR_RT_EventCache::EventCache_Cleanup()
+001078f0 00000064 T CLR_RT_EventCache::Append_Node(CLR_RT_HeapBlock*)
+00107954 0000016c T CLR_RT_EventCache::Extract_Node_Slow(unsigned int, unsigned int, unsigned int)
+00107ac0 00000070 T CLR_RT_EventCache::Extract_Node_Fast(unsigned int, unsigned int, unsigned int)
+00107b30 00000054 T CLR_RT_EventCache::Extract_Node_Bytes(unsigned int, unsigned int, unsigned int)
+00107b84 00000040 T CLR_RT_EventCache::Extract_Node(unsigned int, unsigned int, unsigned int)
+00107bc4 00000008 T CLR_RT_EventCache::FindVirtualMethod(CLR_RT_TypeDef_Index const&, CLR_RT_MethodDef_Index const&, CLR_RT_MethodDef_Index&)
+00107bcc 00000024 T CLR_RT_EventCache::GetInlineFrameBuffer(CLR_RT_InlineBuffer**)
+00107bf0 00000018 T CLR_RT_EventCache::FreeInlineBuffer(CLR_RT_InlineBuffer*)
+00107c08 0000003c T CLR_Checks::VerifyArrayReference(CLR_RT_HeapBlock&)
+00107c44 00000008 T CLR_Checks::VerifyUnknownInstruction(CLR_OPCODE)
+00107c4c 00000008 T CLR_Checks::VerifyUnsupportedInstruction(CLR_OPCODE)
+00107c54 00000010 T CLR_RT_DblLinkedList::DblLinkedList_Initialize()
+00107c64 00000058 T CLR_RT_DblLinkedList::DblLinkedList_PushToCache()
+00107cbc 00000024 T CLR_RT_DblLinkedList::Relocate()
+00107ce0 000000f4 T CLR_RT_HeapBlock_Array::ClearElements(int, int)
+00107dd4 000000e4 T CLR_RT_HeapBlock_Array::CreateInstance(CLR_RT_HeapBlock&, unsigned int, CLR_RT_ReflectionDef_Index const&)
+00107eb8 00000030 T CLR_RT_HeapBlock_Array::CreateInstance(CLR_RT_HeapBlock&, unsigned int, CLR_RT_TypeDef_Index const&)
+00107ee8 00000094 T CLR_RT_HeapBlock_Array::CreateInstance(CLR_RT_HeapBlock&, unsigned int, CLR_RT_Assembly*, unsigned int)
+00107f7c 00000018 T CLR_RT_HeapBlock_Array::Relocate()
+00107f94 00000048 T CLR_RT_HeapBlock_BinaryBlob::Allocate(unsigned int, unsigned int)
+00107fdc 00000024 T CLR_RT_HeapBlock_BinaryBlob::Release(bool)
+00108000 00000010 T CLR_RT_HeapBlock_BinaryBlob::Relocate()
+00108010 0000000c T CLR_RT_HeapBlock_Delegate_List::Relocate()
+0010801c 00000074 T CLR_RT_HeapBlock_Delegate::CreateInstance(CLR_RT_HeapBlock&, CLR_RT_MethodDef_Index const&, CLR_RT_StackFrame*)
+00108090 00000008 T CLR_RT_HeapBlock_Delegate::Relocate()
+00108098 00000110 T CLR_RT_HeapBlock_Finalizer::CreateInstance(CLR_RT_HeapBlock*, CLR_RT_TypeDef_Instance const&)
+001081a8 00000008 T CLR_RT_HeapBlock_Finalizer::Relocate()
+001081b0 00000034 t CLR_RT_DblLinkedList::ExtractFirstNode() [clone .isra.0]
+001081e4 00000054 t CLR_RT_DblLinkedList::InsertAfterNode(CLR_RT_HeapBlock_Node*, CLR_RT_HeapBlock_Node*) [clone .isra.0]
+00108238 00000050 t CLR_RT_DblLinkedList::InsertBeforeNode(CLR_RT_HeapBlock_Node*, CLR_RT_HeapBlock_Node*) [clone .isra.0]
+00108288 000000ac T CLR_RT_HeapBlock_Lock::CreateInstance(CLR_RT_HeapBlock_Lock*&, CLR_RT_Thread*, CLR_RT_HeapBlock&)
+00108334 000000a8 T CLR_RT_HeapBlock_Lock::IncrementOwnership(CLR_RT_HeapBlock_Lock*, CLR_RT_SubThread*, long long const&, bool)
+001083dc 000000ec T CLR_RT_HeapBlock_Lock::ChangeOwner()
+001084c8 00000078 T CLR_RT_HeapBlock_Lock::DestroyOwner(CLR_RT_SubThread*)
+00108540 00000090 T CLR_RT_HeapBlock_Lock::DecrementOwnership(CLR_RT_HeapBlock_Lock*, CLR_RT_SubThread*)
+001085d0 00000010 T CLR_RT_HeapBlock_Lock::Relocate()
+001085e0 00000004 T CLR_RT_HeapBlock_Lock::Relocate_Owner()
+001085e4 000000b0 T CLR_RT_HeapBlock_LockRequest::CreateInstance(CLR_RT_HeapBlock_Lock*, CLR_RT_SubThread*, long long const&, bool)
+00108694 0000001c T CLR_RT_HeapBlock_Node::Relocate()
+001086b0 00000088 T CLR_RT_HeapBlock_String::CreateInstance(CLR_RT_HeapBlock&, unsigned int)
+00108738 00000080 T CLR_RT_HeapBlock_String::CreateInstance(CLR_RT_HeapBlock&, char const*)
+001087b8 00000064 T CLR_RT_HeapBlock_String::CreateInstance(CLR_RT_HeapBlock&, unsigned int, CLR_RT_Assembly*)
+0010881c 000000cc T CLR_RT_HeapBlock_Timer::ThreadTerminationCallback(void*)
+001088e8 00000020 T CLR_RT_HeapBlock_Timer::RecoverFromGC()
+00108908 00000024 T CLR_RT_HeapBlock_Timer::Trigger()
+0010892c 000000e0 T CLR_RT_HeapBlock_Timer::SpawnTimer(CLR_RT_Thread*)
+00108a0c 00000114 T CLR_RT_HeapBlock_WaitForObject::TryWaitForSignal(CLR_RT_Thread*, CLR_RT_HeapBlock*, unsigned int, bool)
+00108b20 00000078 T CLR_RT_HeapBlock_WaitForObject::SignalObject(CLR_RT_HeapBlock&)
+00108b98 0000000c T CLR_RT_HeapBlock_WaitForObject::Relocate()
+00108ba4 00000110 t CompareValues_Numeric(CLR_RT_HeapBlock const&, CLR_RT_HeapBlock const&, bool, int)
+00108cb4 0000007c t FixReflectionForType(CLR_RT_HeapBlock const&, CLR_RT_HeapBlock&)
+00108d30 0000001c T CLR_RT_HeapBlock::InitializeToZero()
+00108d4c 00000044 T CLR_RT_HeapBlock::SetReflection(CLR_RT_TypeSpec_Index const&)
+00108d90 00000028 T CLR_RT_HeapBlock::SetReflection(CLR_RT_TypeDef_Index const&)
+00108db8 00000028 T CLR_RT_HeapBlock::SetReflection(CLR_RT_FieldDef_Index const&)
+00108de0 00000068 T CLR_RT_HeapBlock::SetReflection(CLR_RT_MethodDef_Index const&)
+00108e48 00000040 T CLR_RT_HeapBlock::SetObjectCls(CLR_RT_TypeDef_Index const&)
+00108e88 00000070 T CLR_RT_HeapBlock::InitializeArrayReference(CLR_RT_HeapBlock&, int)
+00108ef8 00000098 T CLR_RT_HeapBlock::FixArrayReferenceForValueTypes()
+00108f90 000001c4 T CLR_RT_HeapBlock::LoadFromReference(CLR_RT_HeapBlock&)
+00109154 00000228 T CLR_RT_HeapBlock::Reassign(CLR_RT_HeapBlock const&)
+0010937c 00000238 T CLR_RT_HeapBlock::StoreToReference(CLR_RT_HeapBlock&, int)
+001095b4 000000a0 T CLR_RT_HeapBlock::AssignAndPinReferencedObject(CLR_RT_HeapBlock const&)
+00109654 00000144 T CLR_RT_HeapBlock::PerformBoxing(CLR_RT_TypeDef_Instance const&)
+00109798 00000124 T CLR_RT_HeapBlock::PerformUnboxing(CLR_RT_TypeDef_Instance const&)
+001098bc 00000090 T CLR_RT_HeapBlock::FixBoxingReference()
+0010994c 00000080 T CLR_RT_HeapBlock::IsZero() const
+001099cc 00000074 T CLR_RT_HeapBlock::Promote()
+00109a40 00000370 T CLR_RT_HeapBlock::Compare_Values(CLR_RT_HeapBlock const&, CLR_RT_HeapBlock const&, bool)
+00109db0 00000240 T CLR_RT_HeapBlock::ObjectsEqual(CLR_RT_HeapBlock const&, CLR_RT_HeapBlock const&, bool)
+00109ff0 000000f0 T CLR_RT_HeapBlock::NumericAdd(CLR_RT_HeapBlock const&)
+0010a0e0 000000f8 T CLR_RT_HeapBlock::NumericSub(CLR_RT_HeapBlock const&)
+0010a1d8 000000c4 T CLR_RT_HeapBlock::NumericMul(CLR_RT_HeapBlock const&)
+0010a29c 0000013c T CLR_RT_HeapBlock::NumericDiv(CLR_RT_HeapBlock const&)
+0010a3d8 000000ec T CLR_RT_HeapBlock::NumericDivUn(CLR_RT_HeapBlock const&)
+0010a4c4 0000016c T CLR_RT_HeapBlock::NumericRem(CLR_RT_HeapBlock const&)
+0010a630 000000ec T CLR_RT_HeapBlock::NumericRemUn(CLR_RT_HeapBlock const&)
+0010a71c 00000070 T CLR_RT_HeapBlock::NumericShl(CLR_RT_HeapBlock const&)
+0010a78c 000000c0 T CLR_RT_HeapBlock::NumericShr(CLR_RT_HeapBlock const&)
+0010a84c 00000070 T CLR_RT_HeapBlock::NumericShrUn(CLR_RT_HeapBlock const&)
+0010a8bc 00000090 T CLR_RT_HeapBlock::NumericNeg()
+0010a94c 00000058 T CLR_RT_HeapBlock::Relocate__HeapBlock()
+0010a9a4 00000008 T CLR_RT_HeapBlock::Relocate_String()
+0010a9ac 00000008 T CLR_RT_HeapBlock::Relocate_Obj()
+0010a9b4 00000024 T CLR_RT_HeapBlock::Relocate_Cls()
+0010a9d8 00000008 T CLR_RT_HeapBlock::Relocate_Ref()
+0010a9e0 00000008 T CLR_RT_HeapBlock::Relocate_ArrayRef()
+0010a9e8 000000f8 T CLR_RT_HeapCluster::ExtractBlocks(unsigned int, unsigned int, unsigned int)
+0010aae0 000000d4 T CLR_RT_HeapCluster::RecoverFromGC()
+0010abb4 0000018c T CLR_RT_HeapCluster::HeapCluster_Initialize(unsigned int, unsigned int)
+0010ad40 00000104 T CLR_RT_HeapCluster::InsertInOrder(CLR_RT_HeapBlock_Node*, unsigned int)
+0010ae48 00000060 T CLR_RT_Memory::Reset()
+0010aea8 00000034 T CLR_RT_Memory::Release(void*)
+0010aedc 0000007c T CLR_RT_Memory::Allocate(unsigned int, unsigned int)
+0010af58 00000008 T CLR_RT_ObjectToEvent_Destination::Initialize()
+0010af60 0000002c T CLR_RT_ObjectToEvent_Destination::CheckAll()
+0010af8c 0000003c T CLR_RT_ObjectToEvent_Destination::SignalAll()
+0010afc8 00000050 T CLR_RT_ObjectToEvent_Destination::DetachAll()
+0010b018 00000024 T CLR_RT_ObjectToEvent_Destination::IsReadyForRelease()
+0010b03c 00000040 T CLR_RT_ObjectToEvent_Destination::ReleaseWhenDead()
+0010b07c 00000040 T CLR_RT_ObjectToEvent_Source::EnsureObjectIsAlive()
+0010b0bc 00000028 T CLR_RT_ObjectToEvent_Source::Detach()
+0010b0e4 0000001c T CLR_RT_ObjectToEvent_Source::Relocate()
+0010b100 0000000c T LinkArraySize()
+0010b10c 0000000c T LinkMRUArraySize()
+0010b118 00000008 T PayloadArraySize()
+0010b120 00000008 T InlineBufferCount()
+0010b128 0000026c T CLR_RT_StackFrame::Push(CLR_RT_Thread*, CLR_RT_MethodDef_Instance const&, int)
+0010b394 00000218 T CLR_RT_StackFrame::PushInline(unsigned char const*&, CLR_RT_Assembly*&, CLR_RT_HeapBlock*&, CLR_RT_MethodDef_Instance&, CLR_RT_HeapBlock*)
+0010b5ac 00000064 T CLR_RT_StackFrame::RestoreFromInlineStack()
+0010b610 00000078 T CLR_RT_StackFrame::PopInline()
+0010b688 00000060 T CLR_RT_StackFrame::RestoreStack(CLR_RT_InlineFrame&)
+0010b6e8 0000004c T CLR_RT_StackFrame::SaveStack(CLR_RT_InlineFrame&)
+0010b734 000001c0 T CLR_RT_StackFrame::FixCall()
+0010b8f4 000001c8 T CLR_RT_StackFrame::MakeCall(CLR_RT_MethodDef_Instance, CLR_RT_HeapBlock*, CLR_RT_HeapBlock*, int)
+0010bac0 00000124 T CLR_RT_StackFrame::HandleSynchronized(bool, bool)
+0010bbe4 000001c4 T CLR_RT_StackFrame::Pop()
+0010bda8 00000020 T CLR_RT_StackFrame::SetResult_I4(int)
+0010bdc8 00000014 T CLR_RT_StackFrame::SetResult_String(char const*)
+0010bddc 00000160 T CLR_RT_StackFrame::Relocate()
+0010bf3c 000000dc T CLR_RT_ExecutionEngine::AllocateHeaps()
+0010c018 00000108 T CLR_RT_ExecutionEngine::ExecutionEngine_Initialize()
+0010c120 00000024 T CLR_RT_ExecutionEngine::CreateInstance()
+0010c144 00000030 T CLR_RT_ExecutionEngine::ExecutionConstraint_Suspend()
+0010c174 00000058 T CLR_RT_ExecutionEngine::ExecutionConstraint_Resume()
+0010c1cc 00000050 T CLR_RT_ExecutionEngine::PerformHeapCompaction()
+0010c21c 00000024 T CLR_RT_ExecutionEngine::Relocate()
+0010c240 0000008c T CLR_RT_ExecutionEngine::WaitForDebugger()
+0010c2cc 000000bc T CLR_RT_ExecutionEngine::SpawnStaticConstructorHelper(CLR_RT_Assembly*, CLR_RT_MethodDef_Index const&)
+0010c388 000000d0 t CLR_RT_ExecutionEngine::SpawnStaticConstructor(CLR_RT_Thread*&) [clone .part.0]
+0010c458 0000011c T CLR_RT_ExecutionEngine::InsertThreadRoundRobin(CLR_RT_DblLinkedList&, CLR_RT_Thread*)
+0010c574 000000bc T CLR_RT_ExecutionEngine::PutInProperList(CLR_RT_Thread*)
+0010c630 000000a4 T CLR_RT_ExecutionEngine::StaticConstructorTerminationCallback(void*)
+0010c6d4 000000a0 T CLR_RT_ExecutionEngine::SpawnStaticConstructor(CLR_RT_Thread*&)
+0010c774 0000011c T CLR_RT_ExecutionEngine::SpawnFinalizer()
+0010c890 0000000c T CLR_RT_ExecutionEngine::FinalizerTerminationCallback(void*)
+0010c89c 000000fc T CLR_RT_ExecutionEngine::SpawnTimer()
+0010c998 000001fc T CLR_RT_ExecutionEngine::ExtractHeapBlocks(CLR_RT_DblLinkedList&, unsigned int, unsigned int, unsigned int)
+0010cb94 000000a4 T CLR_RT_ExecutionEngine::ExtractHeapBlocksForArray(CLR_RT_TypeDef_Instance&, unsigned int, CLR_RT_ReflectionDef_Index const&)
+0010cc38 00000054 T CLR_RT_ExecutionEngine::ExtractHeapBlocksForClassOrValueTypes(unsigned int, unsigned int, CLR_RT_TypeDef_Index const&, unsigned int)
+0010cc8c 00000048 T CLR_RT_ExecutionEngine::ExtractHeapBlocksForEvents(unsigned int, unsigned int, unsigned int)
+0010ccd4 00000048 T CLR_RT_ExecutionEngine::ExtractHeapBytesForObjects(unsigned int, unsigned int, unsigned int)
+0010cd1c 00000060 T CLR_RT_ExecutionEngine::AccessStaticField(CLR_RT_FieldDef_Index const&)
+0010cd7c 00000248 T CLR_RT_ExecutionEngine::NewObject(CLR_RT_HeapBlock&, CLR_RT_TypeDef_Instance const&)
+0010cfc4 000000c4 T CLR_RT_ExecutionEngine::InitializeReference(CLR_RT_HeapBlock&, CLR_RT_SignatureParser&)
+0010d088 000002cc T CLR_RT_ExecutionEngine::InitializeLocals(CLR_RT_HeapBlock*, CLR_RT_Assembly*, CLR_RECORD_METHODDEF const*)
+0010d354 00000044 T CLR_RT_ExecutionEngine::NewObjectFromIndex(CLR_RT_HeapBlock&, CLR_RT_TypeDef_Index const&)
+0010d398 000000d0 T CLR_RT_ExecutionEngine::InitializeReference(CLR_RT_HeapBlock&, CLR_RECORD_FIELDDEF const*, CLR_RT_Assembly*)
+0010d468 000000a4 T CLR_RT_ExecutionEngine::CopyValueType(CLR_RT_HeapBlock*, CLR_RT_HeapBlock const*)
+0010d50c 00000104 T CLR_RT_ExecutionEngine::CloneObject(CLR_RT_HeapBlock&, CLR_RT_HeapBlock const&)
+0010d610 000000f4 T CLR_RT_ExecutionEngine::FindLockObject(CLR_RT_HeapBlock&)
+0010d704 000000c8 T CLR_RT_ExecutionEngine::DeleteLockRequests(CLR_RT_Thread*, CLR_RT_SubThread*, CLR_RT_DblLinkedList&)
+0010d7cc 0000005c T CLR_RT_ExecutionEngine::DeleteLockRequests(CLR_RT_Thread*, CLR_RT_SubThread*)
+0010d828 00000014 T CLR_RT_ExecutionEngine::InvalidateTimerCache()
+0010d83c 000000ac T CLR_RT_ExecutionEngine::CheckTimers(long long&)
+0010d8e8 000002d8 T CLR_RT_ExecutionEngine::CheckThreads(long long&, CLR_RT_DblLinkedList&)
+0010dbc0 00000144 T CLR_RT_ExecutionEngine::ProcessTimer()
+0010dd04 000001d4 T CLR_RT_ExecutionEngine::ScheduleThreads(int)
+0010ded8 000000dc T CLR_RT_ExecutionEngine::WaitForActivity()
+0010dfb4 00000224 T CLR_RT_ExecutionEngine::Execute(wchar_t*, int)
+0010e1d8 00000060 T CLR_RT_ExecutionEngine::LockObject(CLR_RT_HeapBlock&, CLR_RT_SubThread*, long long const&, bool)
+0010e238 00000020 T CLR_RT_ExecutionEngine::UnlockObject(CLR_RT_HeapBlock&, CLR_RT_SubThread*)
+0010e258 000001a8 T CLR_RT_ExecutionEngine::IsInstanceOf(CLR_RT_TypeDescriptor&, CLR_RT_TypeDescriptor&, bool)
+0010e400 00000058 T CLR_RT_ExecutionEngine::IsInstanceOf(CLR_RT_HeapBlock&, CLR_RT_TypeDef_Index const&)
+0010e458 000000d0 T CLR_RT_ExecutionEngine::IsInstanceOf(CLR_RT_HeapBlock&, CLR_RT_Assembly*, unsigned int, bool)
+0010e528 0000007c T CLR_RT_ExecutionEngine::CastToType(CLR_RT_HeapBlock&, unsigned int, CLR_RT_Assembly*, bool)
+0010e5a4 000000c0 T CLR_RT_GarbageCollector::Heap_Relocate_Pass(bool (*)(void**))
+0010e664 0000006c T CLR_RT_GarbageCollector::Heap_Relocate()
+0010e6d0 0000038c T CLR_RT_GarbageCollector::Heap_Compact()
+0010ea5c 0000002c T CLR_RT_GarbageCollector::ExecuteCompaction()
+0010ea88 00000084 T CLR_RT_GarbageCollector::Heap_Relocate(CLR_RT_HeapBlock*, unsigned int)
+0010eb0c 0000007c T CLR_RT_GarbageCollector::Heap_Relocate(void**)
+0010eb88 00000028 T CLR_RT_GarbageCollector::MarkStack::Initialize(CLR_RT_GarbageCollector::MarkStackElement*, unsigned int)
+0010ebb0 000002c8 T CLR_RT_GarbageCollector::ComputeReachabilityGraphForMultipleBlocks(CLR_RT_HeapBlock*, unsigned int)
+0010ee78 00000028 T CLR_RT_GarbageCollector::ComputeReachabilityGraphForSingleBlock(CLR_RT_HeapBlock**)
+0010eea0 00000044 T CLR_RT_ProtectFromGC::Initialize(CLR_RT_HeapBlock&)
+0010eee4 0000002c T CLR_RT_ProtectFromGC::Initialize(void**, void (*)(void*))
+0010ef10 0000002c T CLR_RT_ProtectFromGC::Cleanup()
+0010ef3c 00000064 T CLR_RT_ProtectFromGC::InvokeAll()
+0010efa0 000000a0 T CLR_RT_GarbageCollector::MarkSlow()
+0010f040 000000b4 T CLR_RT_GarbageCollector::MarkWeak()
+0010f0f4 00000184 T CLR_RT_GarbageCollector::CheckMemoryPressure()
+0010f278 00000060 T CLR_RT_GarbageCollector::Assembly_Mark()
+0010f2d8 000001d4 T CLR_RT_GarbageCollector::Thread_Mark(CLR_RT_Thread*)
+0010f4ac 000002a8 T CLR_RT_GarbageCollector::Mark()
+0010f754 000000b4 T CLR_RT_GarbageCollector::RecoverEventsFromGC()
+0010f808 000000c0 T CLR_RT_GarbageCollector::Sweep()
+0010f8c8 000000d4 T CLR_RT_GarbageCollector::ExecuteGarbageCollection()
+0010f99c 000000e4 T CLR_RT_HeapBlock::InitObject()
+0010fa80 000002c8 T CLR_RT_HeapBlock::Convert_Internal(CLR_DataType)
+0010fd48 0000007c T CLR_RT_Thread::PushEH()
+0010fdc4 000000c8 T CLR_RT_Thread::PopEH_Inner(CLR_RT_StackFrame*, unsigned char const*)
+0010fe8c 00000398 T CLR_RT_Thread::FindEhBlock(CLR_RT_StackFrame*, unsigned char const*, unsigned char const*, CLR_RT_ExceptionHandler&, bool)
+00110224 00000234 T CLR_RT_Thread::Execute_Inner()
+00110458 000000e0 T CLR_RT_Thread::Execute()
+00110538 0000016c T CLR_RT_Thread::Execute_DelegateInvoke(CLR_RT_StackFrame&)
+001106a4 00002330 T CLR_RT_Thread::Execute_IL(CLR_RT_StackFrame&)
+001129d4 0000004c T CLR_RT_Assembly::GetString(unsigned short)
+00112a20 00000010 T CLR_RT_Thread::ProtectFromGCCallback(void*)
+00112a30 00000068 t CLR_RT_Thread::ReleaseWhenDeadEx() [clone .part.0]
+00112a98 000000ac T CLR_RT_SubThread::CreateInstance(CLR_RT_Thread*, CLR_RT_StackFrame*, int, CLR_RT_SubThread*&)
+00112b44 000000c4 T CLR_RT_SubThread::DestroyInstance(CLR_RT_Thread*, CLR_RT_SubThread*, int)
+00112c08 00000050 T CLR_RT_SubThread::ChangeLockRequestCount(int)
+00112c58 00000018 T CLR_RT_Thread::BringExecCounterToDate(int)
+00112c70 0000002c T CLR_RT_Thread::CanThreadBeReused()
+00112c9c 000000a0 T CLR_RT_Thread::PushThreadProcDelegate(CLR_RT_HeapBlock_Delegate*)
+00112d40 0000012c T CLR_RT_Thread::CreateInstance(int, int, CLR_RT_Thread*&, unsigned int)
+00112e6c 00000044 T CLR_RT_Thread::CreateInstance(int, CLR_RT_HeapBlock_Delegate*, int, CLR_RT_Thread*&, unsigned int)
+00112eb0 00000018 T CLR_RT_Thread::ReleaseWhenDeadEx()
+00112ec8 00000040 T CLR_RT_Thread::Restart(bool)
+00112f08 00000114 T CLR_RT_Thread::Passivate()
+0011301c 0000005c T CLR_RT_Thread::DestroyInstance()
+00113078 00000004 T CLR_RT_Thread::RecoverFromGC()
+0011307c 00000084 T CLR_RT_Thread::Relocate()
+00113100 0000005c T CLR_RT_Thread::ProcessException_FilterPseudoFrameCopyVars(CLR_RT_StackFrame*, CLR_RT_StackFrame*)
+0011315c 000002fc T CLR_RT_Thread::ProcessException_Phase1()
+00113458 00000240 T CLR_RT_Thread::ProcessException_Phase2()
+00113698 000000c8 T CLR_RT_Thread::ProcessException()
+00113760 0000009c T CLR_RT_Thread::ProcessException_EndFilter()
+001137fc 000000e4 T CLR_RT_Thread::ProcessException_EndFinally()
+001138e0 00000010 T CLR_RT_ReflectionDef_Index::InitializeFromHash(unsigned int)
+001138f0 00000038 T CLR_RT_SignatureParser::Initialize_TypeSpec(CLR_RT_Assembly*, CLR_RECORD_TYPESPEC const*)
+00113928 0000004c T CLR_RT_SignatureParser::Initialize_Interfaces(CLR_RT_Assembly*, CLR_RECORD_TYPEDEF const*)
+00113974 0000003c T CLR_RT_SignatureParser::Initialize_FieldDef(CLR_RT_Assembly*, CLR_RECORD_FIELDDEF const*)
+001139b0 00000044 T CLR_RT_SignatureParser::Initialize_MethodSignature(CLR_RT_Assembly*, CLR_RECORD_METHODDEF const*)
+001139f4 00000074 T CLR_RT_TypeSpec_Instance::ResolveToken(unsigned int, CLR_RT_Assembly*)
+00113a68 00000068 T CLR_RT_TypeDef_Instance::InitializeFromIndex(CLR_RT_TypeDef_Index const&)
+00113ad0 0000007c T CLR_RT_TypeDef_Instance::InitializeFromMethod(CLR_RT_MethodDef_Instance const&)
+00113b4c 000000c4 T CLR_RT_TypeDef_Instance::ResolveToken(unsigned int, CLR_RT_Assembly*)
+00113c10 000000c0 T CLR_RT_TypeDef_Instance::SwitchToParent()
+00113cd0 00000028 T CLR_RT_TypeDef_Instance::HasFinalizer() const
+00113cf8 00000064 T CLR_RT_FieldDef_Instance::InitializeFromIndex(CLR_RT_FieldDef_Index const&)
+00113d5c 000000b0 T CLR_RT_FieldDef_Instance::ResolveToken(unsigned int, CLR_RT_Assembly*)
+00113e0c 00000064 T CLR_RT_MethodDef_Instance::InitializeFromIndex(CLR_RT_MethodDef_Index const&)
+00113e70 000000b0 T CLR_RT_MethodDef_Instance::ResolveToken(unsigned int, CLR_RT_Assembly*)
+00113f20 000000a8 T CLR_RT_TypeDescriptor::InitializeFromDataType(CLR_DataType)
+00113fc8 00000108 T CLR_RT_TypeDescriptor::InitializeFromType(CLR_RT_TypeDef_Index const&)
+001140d0 000002e8 T CLR_RT_TypeDescriptor::InitializeFromObject(CLR_RT_HeapBlock const&)
+001143b8 00000060 T CLR_RT_TypeDescriptor::GetElementType(CLR_RT_TypeDescriptor&)
+00114418 0000004c T CLR_RT_TypeDescriptor::ExtractObjectAndDataType(CLR_RT_HeapBlock*&, CLR_DataType&)
+00114464 000000c4 T CLR_RT_TypeDescriptor::ExtractTypeIndexFromObject(CLR_RT_HeapBlock const&, CLR_RT_TypeDef_Index&)
+00114528 00000078 T CLR_RECORD_ASSEMBLY::GoodHeader() const
+001145a0 0000001c T CLR_RECORD_EH::ExtractEhFromByteCode(unsigned char const*, CLR_RECORD_EH const*&, unsigned int&)
+001145bc 00000110 T CLR_RT_ExceptionHandler::ConvertFromEH(CLR_RT_MethodDef_Instance const&, unsigned char const*, CLR_RECORD_EH const*)
+001146cc 000000f0 T CLR_RT_Assembly::Assembly_Initialize(CLR_RT_Assembly::Offsets&)
+001147bc 000004b0 T CLR_RT_Assembly::CreateInstance(CLR_RECORD_ASSEMBLY const*, CLR_RT_Assembly*&)
+00114c6c 000001f4 T CLR_RT_Assembly::Resolve_Link()
+00114e60 000000e4 T CLR_RT_Assembly::Resolve_MethodDef()
+00114f44 0000009c T CLR_RT_Assembly::Resolve_AllocateStaticFields(CLR_RT_HeapBlock*)
+00114fe0 000000bc T CLR_RT_Assembly::PrepareForExecution()
+0011509c 000000c8 T CLR_RT_Assembly::FindTypeDef(char const*, char const*, CLR_RT_TypeDef_Index&)
+00115164 00000094 T CLR_RT_Assembly::FindTypeDef(char const*, unsigned short, CLR_RT_TypeDef_Index&)
+001151f8 00000148 T CLR_RT_Assembly::Resolve_TypeRef()
+00115340 00000088 T CLR_RT_Assembly::Resolve_TypeDef()
+001153c8 0000007c T CLR_RT_Assembly::FindMethodBoundaries(unsigned short, unsigned short&, unsigned short&)
+00115444 00000068 T CLR_RT_Assembly::FindNextStaticConstructor(CLR_RT_MethodDef_Index&)
+001154ac 00000034 T CLR_RT_Assembly::Relocate()
+001154e0 00000030 T CLR_RT_TypeSystem::TypeSystem_Initialize()
+00115510 00000094 T CLR_RT_TypeSystem::Link(CLR_RT_Assembly*)
+001155a4 000000b0 T CLR_RT_TypeSystem::FindAssembly(char const*, CLR_RECORD_VERSION const*, bool)
+00115654 00000110 T CLR_RT_Assembly::Resolve_AssemblyRef(bool)
+00115764 0000009c T CLR_RT_TypeSystem::FindTypeDef(unsigned int, CLR_RT_TypeDef_Index&)
+00115800 000000e0 T CLR_RT_TypeDef_Instance::InitializeFromReflection(CLR_RT_ReflectionDef_Index const&, unsigned int*)
+001158e0 00000100 T CLR_RT_TypeDescriptor::InitializeFromReflection(CLR_RT_ReflectionDef_Index const&)
+001159e0 00000398 T CLR_RT_SignatureParser::Advance(CLR_RT_SignatureParser::Element&)
+00115d78 000000dc T CLR_RT_TypeDescriptor::InitializeFromSignatureParser(CLR_RT_SignatureParser&)
+00115e54 0000007c T CLR_RT_TypeDescriptor::InitializeFromTypeSpec(CLR_RT_TypeSpec_Index const&)
+00115ed0 00000068 T CLR_RT_TypeSystem::PrepareForExecutionHelper(char const*)
+00115f38 000000cc T CLR_RT_TypeSystem::PrepareForExecution()
+00116004 00000140 T CLR_RT_TypeSystem::MatchSignatureDirect(CLR_RT_SignatureParser&, CLR_RT_SignatureParser&, bool)
+00116144 00000160 T CLR_RT_Assembly::FindMethodDef(CLR_RECORD_TYPEDEF const*, char const*, CLR_RT_Assembly*, unsigned short, CLR_RT_MethodDef_Index&)
+001162a4 000001dc T CLR_RT_Assembly::Resolve_MethodRef()
+00116480 00000138 t local_FindFieldDef(CLR_RT_Assembly*, unsigned int, unsigned int, char const*, CLR_RT_Assembly*, unsigned short, CLR_RT_FieldDef_Index&)
+001165b8 0000007c T CLR_RT_Assembly::FindFieldDef(CLR_RECORD_TYPEDEF const*, char const*, CLR_RT_Assembly*, unsigned short, CLR_RT_FieldDef_Index&)
+00116634 00000100 T CLR_RT_Assembly::Resolve_FieldRef()
+00116734 000001bc T CLR_RT_TypeSystem::BuildTypeName(CLR_RT_TypeDef_Index const&, char*&, unsigned int&, unsigned int, unsigned int)
+001168f0 00000024 T CLR_RT_TypeSystem::BuildTypeName(CLR_RT_TypeDef_Index const&, char*&, unsigned int&)
+00116914 00000374 T CLR_RT_Assembly::Resolve_ComputeHashes()
+00116c88 000004d0 T CLR_RT_TypeSystem::ResolveAll()
+00117158 00000210 T CLR_RT_TypeSystem::FindVirtualMethodDef(CLR_RT_TypeDef_Index const&, CLR_RT_MethodDef_Index const&, char const*, CLR_RT_MethodDef_Index&)
+00117368 00000160 T CLR_RT_TypeSystem::FindVirtualMethodDef(CLR_RT_TypeDef_Index const&, CLR_RT_MethodDef_Index const&, CLR_RT_MethodDef_Index&)
+001174c8 00000038 W SUPPORT_ComputeCRC
+00117500 00000044 t C2Di_FrameEndHook
+00117544 00000368 T C2D_Init
+001178ac 0000004c T C2D_Fini
+001178f8 000000bc T C2D_Prepare
+001179b4 00000048 T C2D_Flush
+001179fc 000000fc T C2D_SceneSize
+00117af8 00000060 T C2D_CreateScreenTarget
+00117b58 00000060 T C2D_TargetClear
+00117bb8 00000054 T C2Di_AppendQuad
+00117c0c 00000040 T C2Di_AppendVtx
+00117c4c 00000738 T C2Di_Update
+00118384 00000168 T C2D_DrawRectangle
+001184ec 00000018 t C2Di_GlyphComp
+00118504 00000180 t C2Di_CalcLineWidths
+00118684 000001d0 T C2D_TextBufNew
+00118854 00000004 T C2D_TextBufDelete
+00118858 0000000c T C2D_TextBufClear
+00118864 000001c4 T C2D_TextFontParseLine
+00118a28 000000a4 T C2D_TextFontParse
+00118acc 00000010 T C2D_TextParse
+00118adc 00000030 T C2D_TextOptimize
+00118b0c 000000e8 T C2D_TextGetDimensions
+00118bf4 00000fdc T C2D_DrawText
+00119bd0 00000050 T C2D_FontGlyphIndexFromCodePoint
+00119c20 00000074 T C2D_FontCalcGlyphPos
+00119c94 00000028 T AttrInfo_Init
+00119cbc 00000094 T AttrInfo_AddLoader
+00119d50 00000054 T C3D_SetAttrInfo
+00119da4 00000080 T C3Di_AttrInfoBind
+00119e24 00000004 W C3Di_LightEnvUpdate
+00119e28 00000004 W C3Di_LightEnvDirty
+00119e2c 000000b4 t C3Di_AptEventHook
+00119ee0 00000004 W C3Di_GasUpdate
+00119ee4 000001d0 T C3D_Init
+0011a0b4 00000098 T C3D_SetViewport
+0011a14c 000004e8 T C3Di_UpdateContext
+0011a634 000000e0 T C3Di_SplitFrame
+0011a714 00000044 T C3D_Fini
+0011a758 00000194 T C3D_BindProgram
+0011a8ec 00000024 T BufInfo_Init
+0011a910 00000080 T BufInfo_Add
+0011a990 0000003c T C3D_SetBufInfo
+0011a9cc 00000048 T C3Di_BufInfoBind
+0011aa14 0000021c T C3D_DrawElements
+0011ac30 00000040 T C3D_DepthMap
+0011ac70 0000001c T C3D_CullFace
+0011ac8c 00000040 T C3D_StencilTest
+0011accc 00000024 T C3D_StencilOp
+0011acf0 0000001c T C3D_BlendingColor
+0011ad0c 00000024 T C3D_EarlyDepthTest
+0011ad30 0000002c T C3D_DepthTest
+0011ad5c 0000002c T C3D_AlphaTest
+0011ad88 00000050 T C3D_AlphaBlend
+0011add8 00000030 T C3D_FragOpMode
+0011ae08 00000044 T C3D_FragOpShadow
+0011ae4c 000001ac T C3Di_EffectBind
+0011aff8 0000001c T C3D_CalcColorBufSize
+0011b014 0000001c T C3D_CalcDepthBufSize
+0011b030 00000044 T C3D_SetFrameBuf
+0011b074 0000016c T C3Di_FrameBufBind
+0011b1e0 000000c8 T C3D_FrameBufClear
+0011b2a8 00000044 T C3D_FrameBufTransfer
+0011b2ec 000000a8 T C3D_ImmSendAttrib
+0011b394 00000070 T C3D_ProcTexInit
+0011b404 00000054 T C3D_ProcTexBind
+0011b458 0000005c T C3D_ProcTexLutBind
+0011b4b4 000000a4 T ProcTexLut_FromArray
+0011b558 00000178 T C3Di_ProcTexUpdate
+0011b6d0 00000068 T C3Di_ProcTexDirty
+0011b738 0000004c t onVBlank0
+0011b784 0000004c t onVBlank1
+0011b7d0 00000080 t C3Di_RenderTargetDestroy
+0011b850 000000f4 t onQueueFinish
+0011b944 00000038 T C3Di_RenderQueueEnableVBlank
+0011b97c 00000030 T C3Di_RenderQueueDisableVBlank
+0011b9ac 00000060 T C3Di_RenderQueueInit
+0011ba0c 000000b4 T C3Di_RenderQueueExit
+0011bac0 00000034 T C3Di_RenderQueueWaitDone
+0011baf4 000000e8 T C3D_FrameBegin
+0011bbdc 00000048 T C3D_FrameDrawOn
+0011bc24 00000058 T C3D_FrameSplit
+0011bc7c 000001d0 T C3D_FrameEnd
+0011be4c 0000001c T C3D_FrameEndHook
+0011be68 00000170 T C3D_RenderTargetCreate
+0011bfd8 000000a8 T C3D_RenderTargetSetOutput
+0011c080 00000034 T C3D_GetTexEnv
+0011c0b4 00000024 T C3Di_TexEnvBind
+0011c0d8 00000044 T C3D_TexBind
+0011c11c 0000014c T C3Di_SetTex
+0011c268 00000290 T C3D_UpdateUniforms
+0011c4f8 000000c0 T C3Di_DirtyUniforms
+0011c5b8 000000d8 T C3Di_LoadShaderUniforms
+0011c690 00000028 T C3Di_ClearShaderUniforms
+0011c6b8 000000cc T Mtx_Ortho
+0011c784 000000cc T Mtx_OrthoTilt
+0011c850 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+0011c874 00000004 t addrMapNodeDestructor(rbtree_node*)
+0011c878 0000012c T linearMemAlign
+0011c9a4 00000008 T linearAlloc
+0011c9ac 0000005c T linearFree
+0011ca08 0000000c T linearSpaceFree
+0011ca14 00000088 T MemPool::CoalesceRight(MemBlock*)
+0011ca9c 00000178 T MemPool::Allocate(MemChunk&, unsigned long, int)
+0011cc14 00000118 T MemPool::Deallocate(MemChunk const&)
+0011cd2c 00000030 T MemPool::GetFreeSpace()
+0011cd5c 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+0011cd80 00000004 t addrMapNodeDestructor(rbtree_node*)
+0011cd84 00000248 T vramMemAlignAt
+0011cfcc 0000000c T vramAlloc
+0011cfd8 0000000c T vramAllocAt
+0011cfe4 00000094 T vramFree
+0011d078 000001c8 T consoleDrawChar
+0011d240 00000170 T consolePrintChar
+0011d3b0 00000cc8 T con_write
+0011e078 000000fc t newRow
+0011e174 00000180 T consoleInit
+0011e2f4 000000b8 T consoleClear
+0011e3ac 0000009c T fontEnsureMapped
+0011e448 00000100 T fontGlyphIndexFromCodePoint
+0011e548 00000214 T fontCalcGlyphPos
+0011e75c 000000cc t gfxPresentFramebuffer
+0011e828 0000001c T gfxIsWide
+0011e844 000000f8 T gfxSetScreenFormat
+0011e93c 00000010 T gfxSetDoubleBuffering
+0011e94c 000000d8 T gfxInit
+0011ea24 00000010 T gfxInitDefault
+0011ea34 000000b8 T gfxExit
+0011eaec 000000a0 T gfxGetFramebuffer
+0011eb8c 00000100 T gfxFlushBuffers
+0011ec8c 00000028 T gfxScreenSwapBuffers
+0011ecb4 00000050 T gfxSwapBuffers
+0011ed04 00000050 T gfxSwapBuffersGpu
+0011ed54 00000074 T osConvertVirtToPhys
+0011edc8 00000054 T osGetTimeRef
+0011ee1c 000000ec T osGetTime
+0011ef08 00000034 T __ctru_speedup_config
+0011ef3c 0000013c T GPUCMD_Add
+0011f078 000000b0 T GPUCMD_Split
+0011f128 00000034 T f32tof16
+0011f15c 00000034 T f32tof24
+0011f190 00000038 T f32tof31
+0011f1c8 00000010 T GX_BindQueue
+0011f1d8 0000007c T GX_ProcessCommandList
+0011f254 00000074 T GX_MemoryFill
+0011f2c8 00000074 T GX_DisplayTransfer
+0011f33c 00000064 t gxCmdQueueDoCommands.part.0
+0011f3a0 000000e4 T gxCmdQueueInterrupt
+0011f484 00000068 T gxCmdQueueClear
+0011f4ec 00000108 T gxCmdQueueAdd
+0011f5f4 00000080 T gxCmdQueueRun
+0011f674 00000064 T gxCmdQueueStop
+0011f6d8 000000ac T gxCmdQueueWait
+0011f784 000001e0 T shaderInstanceInit
+0011f964 00000018 T shaderInstanceGetUniformLocation
+0011f97c 0000001c T shaderProgramInit
+0011f998 00000074 T shaderProgramFree
+0011fa0c 00000094 T shaderProgramSetVsh
+0011faa0 000008d0 T shaderProgramConfigure
+00120370 000001dc t DVLE_GenerateOutmap.part.0
+0012054c 000001ac T DVLB_ParseFile
+001206f8 00000050 T DVLB_Free
+00120748 00000074 T DVLE_GetUniformRegister
+001207bc 00000158 t ndspUpdateMaster
+00120918 00000108 t ndspFinalize
+00120a20 0000025c t ndspInitialize.part.0
+00120c7c 00000108 t ndspHookCallback
+00120d88 00000318 t ndspThreadMain
+001210a0 000003f0 T ndspInit
+00121490 000000d8 T ndspExit
+00121568 00000034 T ndspSetOutputMode
+0012159c 000000e0 T ndspChnReset
+0012167c 00000018 T ndspChnSetFormat
+00121694 00000050 T ndspChnSetPaused
+001216e4 00000050 T ndspChnSetInterp
+00121734 00000060 T ndspChnSetRate
+00121794 00000080 T ndspChnSetMix
+00121814 000000b0 T ndspChnWaveBufClear
+001218c4 000000c8 T ndspChnWaveBufAdd
+0012198c 00000040 T ndspiInitChn
+001219cc 0000002c T ndspiDirtyChn
+001219f8 0000043c T ndspiUpdateChn
+00121e34 00000180 T ndspiReadChnState
+00121fb4 00000180 t aptConvertScreenForCapture
+00122134 00000138 T aptSendCommand
+00122270 00000044 t aptExitProcess
+001222b4 00000394 T aptExit
+00122648 000000d8 T aptHandleSleep
+00122720 00000034 T aptHook
+00122754 00000030 T aptUnhook
+00122784 00000084 T APT_SleepIfShellClosed
+00122808 00000078 T aptSetSleepAllowed
+00122880 00000084 T APT_UnlockTransition
+00122908 00000470 t aptEventHandler
+00122d78 000000bc T APT_ReceiveParameter
+00122e34 000000b0 t aptReceiveParameter.constprop.0
+00122ee8 00000294 t aptScreenTransfer
+0012317c 000002d0 t aptWaitForWakeUp.isra.0
+0012344c 000000f4 T aptJumpToHomeMenu
+00123540 00000058 T aptMainLoop
+00123598 00000240 T aptInit
+001237d8 00000090 T APT_CheckNew3DS
+00123868 00000048 T APT_GetSharedFont
+001238b0 000000a8 T cfguInit
+00123958 0000003c T cfguExit
+00123994 0000004c T CFGU_GetConfigInfoBlk2
+001239e0 00000054 T CFGU_GetSystemLanguage
+00123a34 000000a4 t DSP_LoadComponent.part.0
+00123ad8 000000fc T dspInit
+00123bd4 0000008c T dspExit
+00123c60 00000024 T dspHook
+00123c84 00000030 T dspUnhook
+00123cb4 000000b4 T aptDspSleep
+00123d68 000000b4 T aptDspWakeup
+00123e1c 00000044 T aptDspCancel
+00123e60 00000050 T DSP_FlushDataCache
+00123eb0 00000034 T DSP_SetSemaphore
+00123ee4 00000034 T DSP_SetSemaphoreMask
+00123f18 00000038 T DSP_GetSemaphoreHandle
+00123f50 0000003c T DSP_LoadComponent
+00123f8c 00000044 T DSP_RegisterInterruptEvents
+00123fd0 00000078 T DSP_ReadPipeIfPossible
+00124048 0000004c T DSP_WriteProcessPipe
+00124094 00000044 T DSP_ConvertProcessAddressFromDspDram
+001240d8 00000044 T DSP_RecvData
+0012411c 00000050 T DSP_RecvDataIsReady
+0012416c 00000104 T fsInit
+00124270 0000003c T fsExit
+001242ac 00000068 T fsExemptFromSession
+00124314 00000050 T fsUnexemptFromSession
+00124364 000000cc T FSUSER_OpenFile
+00124430 000000cc T FSUSER_OpenFileDirectly
+001244fc 000000b8 T FSUSER_DeleteFile
+001245b4 000000f4 T FSUSER_RenameFile
+001246a8 000000b8 T FSUSER_DeleteDirectory
+00124760 000000d0 T FSUSER_CreateFile
+00124830 000000c0 T FSUSER_CreateDirectory
+001248f0 000000f4 T FSUSER_RenameDirectory
+001249e4 000000b4 T FSUSER_OpenDirectory
+00124a98 00000090 T FSUSER_OpenArchive
+00124b28 0000008c T FSUSER_CloseArchive
+00124bb4 00000074 T FSUSER_GetSdmcArchiveResource
+00124c28 00000064 T FSUSER_IsSdmcWritable
+00124c8c 00000064 T FSFILE_Read
+00124cf0 0000006c T FSFILE_Write
+00124d5c 00000044 T FSFILE_GetSize
+00124da0 00000028 T FSFILE_SetSize
+00124dc8 0000003c T FSFILE_Close
+00124e04 00000024 T FSFILE_Flush
+00124e28 00000060 T FSDIR_Read
+00124e88 0000003c T FSDIR_Close
+00124ec4 00000c70 t gspHardwareInit
+00125b34 00000288 T gspInit
+00125dbc 00000104 T gspExit
+00125ec0 00000010 T gspHasGpuRight
+00125ed0 000000a4 T gspPresentBuffer
+00125f74 00000030 T gspSetEventCallback
+00125fa4 00000050 T gspWaitForEvent
+00125ff4 0000004c T gspWaitForAnyEvent
+00126040 00000154 t gspEventThreadMain
+00126194 0000012c T gspSubmitGxCommand
+001262c0 00000050 T GSPGPU_FlushDataCache
+00126310 00000034 T GSPGPU_SetLcdForceBlack
+00126344 00000084 T GSPGPU_AcquireRight
+001263c8 00000064 T GSPGPU_ReleaseRight
+0012642c 0000007c T GSPGPU_ImportDisplayCaptureInfo
+001264a8 0000002c T GSPGPU_SaveVramSysArea
+001264d4 0000002c T GSPGPU_RestoreVramSysArea
+00126500 00000024 W hidShouldUseIrrst
+00126524 000001cc T hidInit
+001266f0 000000e8 T hidExit
+001267d8 000002a0 T hidScanInput
+00126a78 00000010 T hidKeysHeld
+00126a88 00000010 T hidKeysDown
+00126a98 00000018 T hidTouchRead
+00126ab0 00000018 T hidCircleRead
+00126ac8 00000200 T httpcInit
+00126cc8 000000bc T httpcExit
+00126d84 00000170 T httpcOpenContext
+00126ef4 00000040 T httpcCloseContext
+00126f34 00000134 T httpcDownloadData
+00127068 0000008c T httpcAddRequestHeaderField
+001270f4 00000030 T httpcBeginRequest
+00127124 0000008c T httpcGetResponseHeader
+001271b0 0000003c T httpcGetResponseStatusCode
+001271ec 00000034 T httpcSetSSLOpt
+00127220 00000034 T httpcSetKeepAlive
+00127254 000001a4 T irrstInit
+001273f8 000000dc T irrstExit
+001274d4 000000b4 T irrstScanInput
+00127588 00000024 T irrstKeysHeld
+001275ac 00000078 T ptmSysmInit
+00127624 0000003c T ptmSysmExit
+00127660 00000034 T PTMSYSM_ConfigureNew3DSCPU
+00127694 00000078 T ptmuInit
+0012770c 0000003c T ptmuExit
+00127748 00000038 T PTMU_GetBatteryLevel
+00127780 00000074 T rbtree_find
+001277f4 00000010 T rbtree_init
+00127804 00000198 t do_insert
+0012799c 00000008 T rbtree_insert
+001279a4 00000310 T rbtree_remove
+00127cb4 00000090 T rbtree_rotate
+00127d44 00000140 T decode_utf8
+00127e84 000000e8 T utf16_to_utf8
+00127f6c 000000c0 T utf8_to_utf16
+00128030 000001e8 W __system_allocateHeaps
+00128218 00000038 W __libctru_init
+00128250 0000016c W __system_initArgv
+001283bc 00000030 T __syscall_getreent
+001283ec 00000004 T __syscall_lock_acquire
+001283f0 00000004 T __syscall_lock_release
+001283f4 00000004 T __syscall_lock_acquire_recursive
+001283f8 00000004 T __syscall_lock_release_recursive
+001283fc 00000004 T __syscall_exit
+00128400 00000054 T initThreadVars
+00128454 00000080 T __system_initSyscalls
+001284d4 T svcControlMemory
+001284f4 T svcQueryMemory
+00128524 T svcExitProcess
+0012852c T svcCreateThread
+0012854c T svcExitThread
+00128554 T svcSleepThread
+0012855c T svcReleaseMutex
+00128564 T svcCreateEvent
+00128578 T svcSignalEvent
+00128580 T svcClearEvent
+00128588 T svcCreateMemoryBlock
+001285a0 T svcMapMemoryBlock
+001285a8 T svcUnmapMemoryBlock
+001285b0 T svcCreateAddressArbiter
+001285c4 T svcArbitrateAddressNoTimeout
+001285cc T svcCloseHandle
+001285d4 T svcWaitSynchronization
+001285dc T svcWaitSynchronizationN
+00128604 T svcDuplicateHandle
+00128618 T svcGetSystemTick
+00128620 T svcConnectToPort
+00128634 T svcSendSyncRequest
+0012863c T svcGetResourceLimit
+00128650 T svcGetResourceLimitLimitValues
+00128658 T svcGetResourceLimitCurrentValues
+00128660 T svcBreak
+00128668 T __aeabi_read_tp
+00128674 W initSystem
+001286c4 W __ctru_exit
+001286d8 0000008c W envGetHandle
+00128764 00000050 W envDestroyHandles
+001287b4 00000164 T srvInit
+00128918 00000064 T srvExit
+0012897c 00000060 T srvEnableNotification
+001289dc 000000a0 T srvGetServiceHandleDirect
+00128a7c 00000048 T srvGetServiceHandle
+00128ac4 00000034 T srvSubscribe
+00128af8 00000060 T srvReceiveNotification
+00128b58 00000038 T srvPublishToSubscriber
+00128b90 0000000c T __sync_init
+00128b9c 00000018 T __sync_fini
+00128bb4 00000028 T syncArbitrateAddress
+00128bdc 0000001c T LightLock_Init
+00128bf8 000000ac T LightLock_Lock
+00128ca4 00000040 T LightLock_Unlock
+00128ce4 00000054 T RecursiveLock_Lock
+00128d38 00000054 T RecursiveLock_Unlock
+00128d8c 00000044 T LightEvent_Init
+00128dd0 000000b8 T LightEvent_Clear
+00128e88 000000dc T LightEvent_Signal
+00128f64 00000050 T LightEvent_TryWait
+00128fb4 000000ac T LightEvent_Wait
+00129060 000001fc T threadCreate
+0012925c 00000038 T threadFree
+00129294 00000024 T threadJoin
+001292b8 00000030 T threadGetCurrent
+001292e8 00000040 T threadExit
+00129328 00000020 t _thread_begin
+00129348 00000090 t mappableFindAddressWithin
+001293d8 00000028 T mappableInit
+00129400 0000007c T mappableAlloc
+0012947c 00000004 T mappableFree
+00129480 0000000c T srvPmGetSessionHandle
+0012948c 00000060 T rbtree_node_next
+001294ec 00000054 T decode_utf16
+00129540 00000054 T encode_utf16
+00129594 000000e0 T encode_utf8
+00129674 00000030 W __appExit
+001296a4 00000030 W __appInit
+001296d4 00000090 W __libctru_exit
+00129764 00000024 t error_cmp
+00129788 00000050 t archive_translate_error
+001297d8 000000c0 t archive_seek
+00129898 00000078 t _archiveInit.part.0
+00129910 00000110 t archiveFindDevice.part.0
+00129a20 00000298 t archive_utf16path
+00129cb8 00000098 t _archiveUnmountDeviceStruct.part.0
+00129d50 00000178 t _archiveMountDevice
+00129ec8 000000f8 t archive_diropen
+00129fc0 000000ac t archive_fstat
+0012a06c 00000074 t archive_fsync
+0012a0e0 00000074 t archive_close
+0012a154 00000078 t archive_dirclose
+0012a1cc 000000ec t sdmc_statvfs
+0012a2b8 000000f8 t archive_chdir
+0012a3b0 0000008c t archive_ftruncate
+0012a43c 000000bc t archive_read
+0012a4f8 000000a8 t archive_unlink
+0012a5a0 000000c0 t archive_rmdir
+0012a660 000000d8 t archive_mkdir
+0012a738 000001a0 t archive_stat
+0012a8d8 00000164 t archive_dirnext
+0012aa3c 0000013c t archive_write
+0012ab78 00000254 t archive_open
+0012adcc 00000270 t archive_rename
+0012b03c 000001c8 T archiveMountSdmc
+0012b204 00000054 T archiveUnmountAll
+0012b258 00000074 T fmodf
+0012b2d0 000000b0 T sin
+0012b380 00000310 T __ieee754_rem_pio2
+0012b690 00000028 T __isnand
+0012b6b8 00000068 T fmod
+0012b720 00000214 T __ieee754_fmodf
+0012b938 000008b8 T __kernel_rem_pio2
+0012c1f0 00000140 T scalbn
+0012c330 00000038 T __isinfd
+0012c368 000000c0 T __kernel_sin
+0012c428 000000c0 T ceilf
+0012c4e8 00000144 T floor
+0012c62c 0000052c T __ieee754_fmod
+0012cb58 00000150 T __kernel_cos
+0012cca8 00000014 T fabs
+0012ccbc 0000002c T __aeabi_d2lz
+0012ccbc 0000002c T __fixdfdi
+0012cce8 00000040 T __aeabi_d2ulz
+0012cce8 00000040 T __fixunsdfdi
+0012cd28 00000130 T __udivmoddi4
+0012ce58 000000e4 T strncat
+0012cf3c 00000034 T ftell
+0012cf70 00000130 t critical_factorization
+0012d0a0 0000033c t two_way_long_needle
+0012d3dc 00000238 T strstr
+0012d614 00000128 T memcpy
+0012d73c 0000002c T vprintf
+0012d768 0000008c T strlen
+0012d7f4 00000334 T _fread_r
+0012db28 00000038 T fread
+0012db60 00000078 T bsearch
+0012dbd8 00000134 T _fopen_r
+0012dd0c 00000028 T fopen
+0012dd34 000005e0 t get_arg
+0012e318 00003554 T _vfprintf_r
+0013186c 000000b4 t __sbprintf
+00131920 00000028 T memalign
+00131948 000000a0 T _wcrtomb_r
+001319e8 000000a0 T snprintf
+00131a88 00000034 T printf
+00131abc 000001ec t _strtoul_l.isra.0
+00131ca8 0000003c T strtoul
+00131ce4 000000a4 T __ssprint_r
+00131d88 00000058 T remove
+00131de0 00000140 T strchr
+00131f20 000000d8 T memcmp
+00131ff8 00000028 T calloc
+00132020 0000016c T _memalign_r
+0013218c 0000000c T __errno
+00132198 00000164 T __smakebuf_r
+001322fc 00000090 T __swhatbuf_r
+0013238c 00000024 T __locale_mb_cur_max
+001323b0 000000e4 T memset
+00132494 000000d8 T _calloc_r
+0013256c 0000022c T __sflush_r
+00132798 000000c4 T _fflush_r
+0013285c 00000088 T _vsnprintf_r
+001328e4 00000038 T vsnprintf
+0013291c 00000030 T __sprint_r
+0013294c 00000104 T _fwrite_r
+00132a50 00000038 T fwrite
+00132a88 000008e8 T qsort
+00133370 000001c4 T _ftello_r
+00133534 0000082c T _malloc_r
+00133d60 000001c0 t quorem
+00133f20 00001420 T _dtoa_r
+00135340 00000114 T _malloc_trim_r
+00135454 00000314 T _free_r
+00135768 00000294 T setvbuf
+001359fc 0000001c t stdio_exit_handler
+00135a18 0000005c t cleanup_stdio
+00135a74 00000154 t global_stdio_init.part.0
+00135bc8 00000138 T __sfp
+00135d00 0000005c T __sinit
+00135d5c 0000000c T __sfp_lock_acquire
+00135d68 0000000c T __sfp_lock_release
+00135d74 00000084 T __libc_init_array
+00135df8 00000028 T rename
+00135e20 000000d4 T strncpy
+00135ef4 0000001c T _fseek_r
+00135f10 00000034 T fseek
+00135f44 00000040 T malloc
+00135f84 00000020 T free
+00135fa4 000000e8 T memchr
+0013608c 00000028 T _wcsrtombs_r
+001360b4 00000048 T strrchr
+001360fc 00000140 T __swsetup_r
+0013623c 000000e0 T _puts_r
+0013631c 00000020 T puts
+0013633c 00000024 T _localeconv_r
+00136360 00000044 T __sread
+001363a4 00000068 T __swrite
+0013640c 00000040 T __sseek
+0013644c 00000008 T __sclose
+00136454 000001a8 T memmove
+001365fc 000004f0 T _realloc_r
+00136aec 0000000c T __malloc_lock
+00136af8 0000000c T __malloc_unlock
+00136b04 00000588 T _fseeko_r
+0013708c 00000148 T _fclose_r
+001371d4 00000020 T fclose
+001371f4 0000003c T fprintf
+00137230 00000004 W __call_exitprocs
+00137234 00000030 T exit
+00137264 000005e0 t get_arg
+00137848 0000345c T _svfprintf_r
+0013aca4 000000b8 T __sflags
+0013ad5c 00000028 T stat
+0013ad84 0000012c T __ssputs_r
+0013aeb0 000000f8 T __utf8_wctomb
+0013afa8 0000003c T __libc_fini_array
+0013afe4 0000003c T strnlen
+0013b020 000000d8 T strncmp
+0013b0f8 0000001c T tolower
+0013b114 0000015c T _wcsnrtombs_l
+0013b270 00000064 T _wcsnrtombs_r
+0013b2d4 00000038 t lflush
+0013b30c 000001a8 T __srefill_r
+0013b4b8 00000088 T frexp
+0013b540 0000005c T __assert_func
+0013b59c 00000088 T _Balloc
+0013b624 0000001c T _Bfree
+0013b640 000000f4 T __multadd
+0013b734 00000080 T __hi0bits
+0013b7b4 000000f0 T __lo0bits
+0013b8a4 000000a4 T __i2b
+0013b948 00000230 T __multiply
+0013bb78 00000130 T __pow5mult
+0013bca8 00000138 T __lshift
+0013bde0 00000058 T __mcmp
+0013be38 00000218 T __mdiff
+0013c050 00000120 T __d2b
+0013c170 00000070 T _fwalk_sglue
+0013c1e0 00000340 T __utf8_mbtowc
+0013c520 0000003c T fiprintf
+0013c55c 000004a4 T __sfvwrite_r
+0013ca00 00000014 T abort
+0013ca14 000005e0 t get_arg
+0013cff4 000022f8 T _vfiprintf_r
+0013f2ec 000000b4 t __sbprintf
+0013f3a0 0000009c T _raise_r
+0013f43c 00000020 T raise
+0013f45c 00000020 T _exit
+0013f47c 00000140 T chdir
+0013f5bc 000001c8 T _concatenate_path
+0013f784 00000070 t __dirnext
+0013f7f4 00000114 T opendir
+0013f908 00000098 T closedir
+0013f9a0 000000f8 T readdir_r
+0013fa98 00000048 T readdir
+0013fae0 0000009c T _fstat_r
+0013fb7c 00000014 T _getpid_r
+0013fb90 0000002c T __getreent
+0013fbbc 000000a0 T __release_handle
+0013fc5c 000000b0 T __alloc_handle
+0013fd0c 00000058 T __get_handle
+0013fd64 00000110 T _close_r
+0013fe74 00000008 t null_write
+0013fe7c 00000018 T setDefaultDevice
+0013fe94 00000098 T FindDevice
+0013ff2c 00000024 T RemoveDevice
+0013ff50 00000088 T AddDevice
+0013ffd8 00000020 T GetDeviceOpTab
+0013fff8 00000008 T _isatty_r
+00140000 00000014 T _kill_r
+00140014 00000094 T _lseek_r
+001400a8 00000068 T mkdir
+00140110 000000c0 T _open_r
+001401d0 00000094 T _read_r
+00140264 00000088 T _rename_r
+001402ec 0000007c T _rmdir_r
+00140368 00000020 T rmdir
+00140388 00000078 W _sbrk_r
+00140400 00000080 T _stat_r
+00140480 0000001c T __libc_lock_acquire
+0014049c 0000001c T __libc_lock_release
+001404b8 0000001c T __libc_lock_acquire_recursive
+001404d4 0000001c T __libc_lock_release_recursive
+001404f0 00000078 T _unlink_r
+00140568 00000094 T _write_r
+001405fc T _fini
+00141000 00000007 r GetGlyph5x7(char)::SPACE
+00141008 000000fc r CSWTCH.182
+00141104 00000320 r g_appNativeBindings
+00141424 00000007 r GetGlyph5x7(char)::LT
+0014142c 00000007 r GetGlyph5x7(char)::GT
+00141434 00000007 r GetGlyph5x7(char)::UNDERSCORE
+0014143c 00000007 r GetGlyph5x7(char)::DASH
+00141444 00000007 r GetGlyph5x7(char)::COLON
+0014144c 00000007 r GetGlyph5x7(char)::COMMA
+00141454 00000007 r GetGlyph5x7(char)::DOT
+0014145c 00000007 r GetGlyph5x7(char)::QMARK
+00141464 00000007 r GetGlyph5x7(char)::EXCL
+0014146c 00000007 r GetGlyph5x7(char)::N9
+00141474 00000007 r GetGlyph5x7(char)::N8
+0014147c 00000007 r GetGlyph5x7(char)::N7
+00141484 00000007 r GetGlyph5x7(char)::N6
+0014148c 00000007 r GetGlyph5x7(char)::N5
+00141494 00000007 r GetGlyph5x7(char)::N4
+0014149c 00000007 r GetGlyph5x7(char)::N3
+001414a4 00000007 r GetGlyph5x7(char)::N2
+001414ac 00000007 r GetGlyph5x7(char)::N1
+001414b4 00000007 r GetGlyph5x7(char)::N0
+001414bc 00000007 r GetGlyph5x7(char)::Z
+001414c4 00000007 r GetGlyph5x7(char)::Y
+001414cc 00000007 r GetGlyph5x7(char)::X
+001414d4 00000007 r GetGlyph5x7(char)::W
+001414dc 00000007 r GetGlyph5x7(char)::V
+001414e4 00000007 r GetGlyph5x7(char)::U
+001414ec 00000007 r GetGlyph5x7(char)::T
+001414f4 00000007 r GetGlyph5x7(char)::S
+001414fc 00000007 r GetGlyph5x7(char)::R
+00141504 00000007 r GetGlyph5x7(char)::Q
+0014150c 00000007 r GetGlyph5x7(char)::P
+00141514 00000007 r GetGlyph5x7(char)::O
+0014151c 00000007 r GetGlyph5x7(char)::N
+00141524 00000007 r GetGlyph5x7(char)::M
+0014152c 00000007 r GetGlyph5x7(char)::L
+00141534 00000007 r GetGlyph5x7(char)::K
+0014153c 00000007 r GetGlyph5x7(char)::J
+00141544 00000007 r GetGlyph5x7(char)::I
+0014154c 00000007 r GetGlyph5x7(char)::H
+00141554 00000007 r GetGlyph5x7(char)::G
+0014155c 00000007 r GetGlyph5x7(char)::F
+00141564 00000007 r GetGlyph5x7(char)::E
+0014156c 00000007 r GetGlyph5x7(char)::D
+00141574 00000007 r GetGlyph5x7(char)::C
+0014157c 00000007 r GetGlyph5x7(char)::B
+00141584 00000007 r GetGlyph5x7(char)::A
+001418dc 000006b8 r c_CLR_StringTable_Lookup
+00141f94 00002c41 r c_CLR_StringTable_Data
+00144c08 00000007 r c_MARKER_ASSEMBLY_V1
+00144c10 00000018 r c_MethodIndexLookup
+00144c28 000002f4 r c_TypeIndexLookup
+00144f1c 00000104 R c_CLR_RT_LogicalOpcodeLookup
+00145020 00000123 R c_CLR_RT_OpcodeLookup
+00145144 00000474 R c_CLR_RT_DataTypeLookup
+001455b8 00000400 R c_CRCTable
+001459b8 000000a8 R STRINGS
+00148388 r .LC2
+001484cc 00000004 V CLR_TkFromStream(unsigned char const*&)::c_lookup
+001484d0 0000001c r CSWTCH.678
+001484f0 00000002 V CLR_UncompressMethodToken(unsigned int)::c_lookup
+001484f4 00000002 V CLR_UncompressFieldToken(unsigned int)::c_lookup
+001484f8 00000003 V CLR_UncompressTypeToken(unsigned int)::c_lookup
+001484fc R render2d_shbin
+00148688 00000004 r depthFmtSizes
+00148688 R render2d_shbin_end
+0014868c 00000005 r colorFmtSizes
+00148694 00000010 r CSWTCH.11
+001488e8 00000080 r dotab_stdout
+00148968 00000018 r grayScale
+00148980 00000006 r colorCube
+00148988 00000030 r colorTable
+001489c4 00000011 r dsp_filename.0
+001489f4 00000008 r morton_y.2
+001489fc 00000008 r morton_x.3
+00148a04 00000008 r s_sleepWakeEvents.4
+00148a0c 0000000c r serviceNameTable.5
+00148a18 R default_font_bin
+00149218 R default_font_bin_end
+00149218 00000030 r error_table
+00149248 00000080 r archive_devoptab
+001492c8 00000080 r npio2_hw
+00149348 00000108 r two_over_pi
+00149450 00000008 r Zero
+00149458 00000040 r PIo2
+00149498 00000010 r init_jk
+001494a8 00000010 r Zero
+001495e0 00000010 r zeroes.0
+001495f0 00000010 r blanks.1
+00149600 0000006c R __action_table
+0014966c 0000006c R __state_table
+001496d8 00000100 R __chclass
+001498cc 00000010 r zeroes.0
+001498dc 00000010 r blanks.1
+001498ec 00000101 R _ctype_
+001499f0 0000000c r p05.0
+00149a00 00000028 R __mprec_bigtens
+00149a28 000000c8 R __mprec_tens
+00149bdc 00000010 r zeroes.0
+00149bec 00000010 r blanks.1
+00149bfc 00000080 R dotab_stdnull
+00149c7c R __tdata_align
+00149c80 r __EH_FRAME_BEGIN__
+00149c80 R __exidx_end
+00149c80 R __exidx_start
+0014a000 00000001 d g_graphicsTarget
+0014a001 00000001 d g_musicLoopEnabled
+0014a004 00000004 d g_audioMusicVolume
+0014a008 00000004 d g_audioSfxVolume
+0014a00c 00000004 D s_CLR_RT_fTrace_AssemblyOverhead
+0014a010 00000004 D s_CLR_RT_fTrace_Exceptions
+0014a014 00000004 D s_CLR_RT_fTrace_Errors
+0014a018 00000008 d framerateCounter
+0014a020 00000004 d framerate
+0014a024 00000001 d firstConsoleInit.0
+0014a028 00000004 D currentConsole
+0014a02c 00000048 D defaultConsole
+0014a074 00000004 d queueLock
+0014a078 00000004 d aptChainloadDeliverArgSize
+0014a07c 00000004 d kCount
+0014a080 00000004 d kInterval
+0014a084 00000004 d kDelay
+0014a088 W __stacksize__
+0014a08c 00000004 D _impure_ptr
+0014a090 00000200 D _impure_data
+0014a290 00000254 D __global_locale
+0014a4e4 00000004 D __malloc_sbrk_base
+0014a4e8 00000004 D __malloc_trim_threshold
+0014a4f0 00000408 D __malloc_av_
+0014a8f8 0000000c D __sglue
+0014a904 00000400 d _current_working_directory
+0014ad08 00001000 d handles
+0014bd08 0000000c d __stderr_handle
+0014bd14 0000000c d __stdout_handle
+0014bd20 0000000c d __stdin_handle
+0014bd2c 0000008c D devoptab_list
+0014bdb8 00000004 d defaultDevice
+0014bdc4 d _GLOBAL_OFFSET_TABLE_
+0014bdd0 d __frame_dummy_init_array_entry
+0014bdd0 D __init_array_start
+0014bdd0 B __preinit_array_end
+0014bdd0 B __preinit_array_start
+0014bdd0 D __tdata_lma
+0014bdd0 D __tdata_lma_end
+0014bdd4 d __do_global_dtors_aux_fini_array_entry
+0014bdd4 D __fini_array_start
+0014bdd4 D __init_array_end
+0014bdd8 D __bss_start__
+0014bdd8 D __fini_array_end
+0014bdd8 00000004 b browserItemCount
+0014bddc 00000004 b textBuf
+0014bde0 00000100 b currentDir
+0014bee0 00000100 b selectedAppPath
+0014bfe0 00000004 b selectedIndex
+0014bfe4 00000001 B current_lang
+0014bfe8 00000004 b listOffset
+0014bfec 00000080 b statusText
+0014c06c 00000001 b statusTextTemporary
+0014c070 00000008 b statusTextTime
+0014c078 00000001 b folderFound
+0014c079 00000001 b mscorlibFound
+0014c07a 00000001 b canLaunch
+0014c07c 00000004 b topScreen
+0014c080 00000004 b bottomScreen
+0014c084 00000001 b initialized
+0014c085 00000001 b creditsVisible
+0014c088 00009840 b browserItems
+001558c8 00000004 b g_randomSeed
+001558cc 00000001 b g_runtimeExitRequested
+001558cd 00000001 b g_runtimeRestartRequested
+001558d0 00000018 b g_musicWaveBuf
+001558e8 00000001 b g_graphicsUsed
+001558e9 00000001 b g_consoleModeScreenShown
+001558ec 00000004 b g_runtimeFps
+001558f0 00000001 b g_audioInitialized
+001558f4 00000018 b g_beepWaveBuf
+0015590c 00000018 b g_wavWaveBuf
+00155924 00000004 b g_inputCircle
+00155928 00000004 b g_inputTouch
+0015592c 00000004 b g_inputKeysHeld
+00155930 00000004 b g_inputKeysDown
+00155934 00000080 b g_selectedAppName
+001559b4 00000100 b g_selectedAppDir
+00155ab4 00000100 b g_selectedAppPath
+00155bb4 00000004 b g_musicBuffer
+00155bb8 00000004 b g_musicBufferBytes
+00155bbc 00000004 b g_wavBuffer
+00155bc0 00000004 b g_wavBufferBytes
+00155bc4 00000004 b g_audioBuffer
+00155bc8 00000004 b g_mscorlibAssembly
+00155bcc 00000004 b g_appAssembly
+00155bd0 00000004 b main::args
+00155bd8 00000008 b g_runtimeFpsLastTime
+00155be0 00000004 b g_runtimeFrameCounter
+00155be4 00001000 b g_directoryListBuffer
+00156be4 00001000 b g_fileReadBuffer
+00157be4 00001000 b g_mscorlibNativeMethods
+00158be4 00001000 b g_appNativeMethods
+00159c00 0000000c B g_HAL_Completion_List
+00159c0c 00000024 B HalSystemConfig
+00159c40 00400000 b g_ClrHeapBuffer
+00559c40 00008000 b DownloadFileInternal(char const*, char const*, int)::buffer
+00561c40 00008000 b DrainHttpBody(httpcContext*)::buffer
+00569c40 00000008 B s_CLR_RT_Heap
+00569c48 00000004 b s_PreHeapInitIndex
+00569c4c 00000c04 B g_scratchInterruptDispatchingStorage
+0056a850 00000904 B g_scratchInlineBuffer
+0056b154 00001804 B g_scratchVirtualMethodPayload
+0056c958 00000808 B g_scratchVirtualMethodTableLinkMRU
+0056d160 00000a08 B g_scratchVirtualMethodTableLink
+0056db68 00000034 B g_CLR_HW_Hardware
+0056db9c 00000050 B g_CLR_RT_GarbageCollector
+0056dbec 000001f4 B g_CLR_RT_EventCache
+0056dde0 00000110 B g_CLR_RT_TypeSystem
+0056def0 00000008 B g_CLR_RT_WellKnownMethods
+0056def8 00000108 B g_CLR_RT_WellKnownTypes
+0056e000 000000d8 B g_CLR_RT_ExecutionEngine
+0056e0d8 00000004 B g_buildCRC
+0056e0e0 00000018 B CLR_RT_ExecutionEngine::s_compensation
+0056e0f8 00000004 B CLR_RT_ProtectFromGC::s_first
+0056e100 000005a8 B __C2Di_Context
+0056e6a8 00000040 b s_projTop
+0056e6e8 00000040 b s_projBot
+0056e728 00000004 b uLoc_mdlvMtx
+0056e72c 00000004 b uLoc_projMtx
+0056e730 00000004 b s_glyphSheets
+0056e734 00000004 b s_textScale
+0056e738 b completed.1
+0056e73c b object.0
+0056e754 0000000c b hookCookie
+0056e760 000002d0 B __C3D_Context
+0056ea30 00000004 b frameEndCbData
+0056ea34 00000004 b frameEndCb
+0056ea38 00000008 b frameCounter
+0056ea40 00000001 b isTopStereo
+0056ea41 00000001 b needSwapBot
+0056ea42 00000001 b needSwapTop
+0056ea43 00000001 b measureGpuTime
+0056ea44 00000001 b inSafeTransfer
+0056ea45 00000001 b inFrame
+0056ea48 00000010 b cpuTime
+0056ea58 00000010 b gpuTime
+0056ea68 0000000c b linkedTarget
+0056ea74 00000004 b lastTarget
+0056ea78 00000004 b firstTarget
+0056ea7c 00000008 b C3Di_IVUnifEverDirty
+0056ea84 000000c0 b C3Di_FVUnifEverDirty
+0056eb44 00000018 b C3Di_ShaderFVecData
+0056eb5c 00000002 B C3D_BoolUnifsDirty
+0056eb60 00000008 B C3D_IVUnifDirty
+0056eb68 000000c0 B C3D_FVUnifDirty
+0056ec28 00000004 B C3D_BoolUnifs
+0056ec2c 00000020 B C3D_IVUnif
+0056ec4c 00000c00 B C3D_FVUnif
+0056f850 00000008 b sLinearPool
+0056f858 0000000c b sAddrMap
+0056f868 00000008 b sVramPoolB
+0056f870 00000008 b sVramPoolA
+0056f878 0000000c b sAddrMap
+0056f884 00000064 b escapeSeq
+0056f8e8 00000048 B currentCopy
+0056f930 00000004 b sharedFontAddr
+0056f934 00000004 B g_sharedFont
+0056f938 00000004 b screenAlloc
+0056f93c 00000004 b screenFree
+0056f940 00000002 b gfxIsDoubleBuf
+0056f944 00000002 b gfxCurBuf
+0056f946 00000001 b gfxIsVram
+0056f947 00000001 b gfxTopMode
+0056f948 00000002 b gfxFramebufferFormats
+0056f94c 00000004 b gfxBottomFramebufferMaxSize
+0056f950 00000004 b gfxTopFramebufferMaxSize
+0056f958 00000008 b gfxBottomFramebuffers
+0056f960 00000008 b gfxTopFramebuffers
+0056f968 00000001 V __ctru_speedup
+0056f96c 00000004 B gpuCmdBufOffset
+0056f970 00000004 B gpuCmdBufSize
+0056f974 00000004 B gpuCmdBuf
+0056f978 00000004 b boundQueue
+0056f97c 00000001 b shouldStop
+0056f97d 00000001 b isRunning
+0056f97e 00000001 b isActive
+0056f980 00000004 b curQueue
+0056f984 00000004 b ndspRefCount
+0056f988 00000048 b ndspMaster
+0056f9d0 00000004 b ndspThread
+0056f9d4 00000001 b ndspThreadRun
+0056f9d8 00001080 b dspVar5Backup
+00570a58 00000004 b ndspMutex
+00570a5c 00000008 b sleepEvent
+00570a64 00000004 b dspSem
+00570a68 00000004 b irqEvent
+00570a6c 00000008 b ndspHookCookie
+00570a74 00000001 b componentFree
+00570a76 00000002 b componentDataMask
+00570a78 00000002 b componentProgMask
+00570a7c 00000004 b componentSize
+00570a80 00000004 b componentBin
+00570a84 00000004 b frameCount
+00570a88 00000004 b droppedFrames
+00570a8c 00000001 b bCancelReceived
+00570a8d 00000001 b bSleeping
+00570a8e 00000001 b bEnteringSleep
+00570a8f 00000001 b bDspReady
+00570a90 00000080 B ndspVars
+00570b10 00000002 B ndspBufferId
+00570b12 00000002 B ndspBufferCurId
+00570b14 00000002 B ndspFrameId
+00570b18 00000c60 b ndspChn
+00571778 00000001 b flagValue.0
+00571779 00000001 b flagInit.1
+0057177c 00000004 b serviceName.6
+00571780 00000001 b aptChainloadFlags
+00571781 00000001 b aptChainloadMediatype
+00571784 00000020 b aptChainloadHmac
+005717a4 00000300 b aptChainloadDeliverArg
+00571aa8 00000008 b aptChainloadTid
+00571ab0 00001000 b aptParameters
+00572ab0 00000004 b aptFlags
+00572ab4 00000001 b aptHomeButtonState
+00572ab8 00000004 b aptMessageFuncData
+00572abc 00000004 b aptMessageFunc
+00572ac0 0000000c b aptFirstHook
+00572acc 00000001 b aptEventHandlerThreadQuit
+00572ad0 00000004 b aptEventHandlerThread
+00572ad4 00000008 b aptSleepEvent
+00572adc 00000008 b aptReceiveEvent
+00572ae4 00000008 b aptEvents
+00572aec 00000004 b aptLockHandle
+00572af0 00000004 b aptRefCount
+00572af4 00000004 b cfguRefCount
+00572af8 00000004 b cfguHandle
+00572afc 00000002 b dspSavedCompDataMask
+00572afe 00000002 b dspSavedCompProgMask
+00572b00 00000004 b dspSavedCompSize
+00572b04 00000004 b dspSavedCompBin
+00572b08 00000001 b dspSleeping
+00572b09 00000001 b dspComponentLoaded
+00572b0c 00000008 b dspFirstHook
+00572b14 00000004 b dspRefCount
+00572b18 00000004 b dspHandle
+00572b20 00000080 b fsExemptArchives
+00572ba0 00000004 b fsuRefCount
+00572ba4 00000004 b fsuHandle
+00572ba8 00000007 b gspEventCbOneShot
+00572bb0 0000001c b gspEventCbData
+00572bcc 0000001c b gspEventCb
+00572be8 00000038 b gspEvents
+00572c20 00000004 b gspLastEvent
+00572c24 00000001 b gspRunEvents
+00572c28 00000004 b gspEventThread
+00572c2c 00000004 b gspEvent
+00572c30 00000001 b gspGpuRight
+00572c31 00000001 b gspThreadId
+00572c34 00000004 b gspSharedMem
+00572c38 00000004 b gspSharedMemHandle
+00572c3c 00000004 b gspRefCount
+00572c40 00000004 b gspGpuHandle
+00572c44 00000001 b usingIrrst
+00572c48 00000004 b hidRefCount
+00572c4c 00000006 b gRate
+00572c54 00000006 b aVec
+00572c5c 00000004 b cPos
+00572c60 00000004 b tPos
+00572c64 00000004 b kRepeat
+00572c68 00000004 b kUp
+00572c6c 00000004 b kDown
+00572c70 00000004 b kHeld
+00572c74 00000004 b kOld
+00572c78 00000004 B hidSharedMem
+00572c7c 00000014 B hidEvents
+00572c90 00000004 B hidMemHandle
+00572c94 00000004 B hidHandle
+00572c98 00000004 b __httpc_sharedmem_handle
+00572c9c 00000004 b __httpc_sharedmem_size
+00572ca0 00000004 B __httpc_sharedmem_addr
+00572ca4 00000004 b __httpc_refcount
+00572ca8 00000004 B __httpc_servhandle
+00572cac 00000004 b irrstRefCount
+00572cb0 00000004 b csPos
+00572cb4 00000004 b kHeld
+00572cb8 00000004 B irrstSharedMem
+00572cbc 00000004 B irrstEvent
+00572cc0 00000004 B irrstMemHandle
+00572cc4 00000004 B irrstHandle
+00572cc8 00000004 b ptmSysmRefCount
+00572ccc 00000004 b ptmSysmHandle
+00572cd0 00000004 b ptmuRefCount
+00572cd4 00000004 b ptmuHandle
+00572cd8 00000004 V __ctru_linear_heap_size
+00572cdc 00000004 V __ctru_heap_size
+00572ce0 00000004 B __ctru_linear_heap
+00572ce4 00000004 B __ctru_heap
+00572ce8 00000004 B __system_retAddr
+00572cec 00000004 B __system_argv
+00572cf0 00000004 B __system_argc
+00572cf4 b saved_stack
+00572cfc 00000004 B __3dslink_host
+00572d00 00000004 b srvRefCount
+00572d04 00000004 b srvHandle
+00572d08 00000004 b arbiter
+00572d0c 00000004 b currentAddr
+00572d10 00000004 b maxAddr
+00572d14 00000004 b minAddr
+00572d18 00000004 b srvPmHandle
+00572d20 000005c0 b archive_devices
+005732e0 00000004 b archive_device_cwd
+005732e4 00000001 b archive_initialized
+005732e8 00000028 B __malloc_current_mallinfo
+00573310 00000004 B __malloc_max_total_mem
+00573314 00000004 B __malloc_max_sbrked_mem
+00573318 00000004 B __malloc_top_pad
+0057331c 0000000c b __sfp_recursive_mutex
+00573328 00000168 B __sf
+00573490 00000004 B __stdio_exit_handler
+00573494 0000000c b __malloc_recursive_mutex
+005734a0 00000400 b temp_cwd
+005738a0 00000004 b __hndl_lock
+005738a4 00000004 B fake_heap_start
+005738a8 00000004 B fake_heap_end
+005738ac 00000004 b heap_start.0
+005738b0 B __tls_start
+005744b8 B __bss_end__
+005744b8 A __end__
+005744b8 B __tls_end

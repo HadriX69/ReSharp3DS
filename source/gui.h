@@ -1,6 +1,8 @@
 #ifndef GUI_H
 #define GUI_H
 
+#define RESHARP3DS_VERSION "v2.3.6"
+
 #ifdef __cplusplus
 extern "C" {
 #endif

@@ -39,7 +39,7 @@ static char g_selectedAppDir[256] = { 0 };
 static char g_selectedAppName[128] = { 0 };
 static u32 g_randomSeed = 0;
 
-static const char* RUNTIME_VERSION = "v2.0.3-beta.9";
+static const char* RUNTIME_VERSION = RESHARP3DS_VERSION;
 static bool g_runtimeExitRequested = false;
 static bool g_runtimeRestartRequested = false;
 static int g_runtimeFps = 0;
