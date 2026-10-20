@@ -1,0 +1,42 @@
+#include "lang_strings.h"
+
+const Strings STRINGS[NUM_LANGUAGES] = {
+    // EN
+    {
+        .str_mscorlib_restoring = "Restoring mscorlib.pe...",
+        .str_mscorlib_failed_restore = "mscorlib.pe restore failed !",
+        .str_mscorlib_restored = "mscorlib.pe restored !",
+        .str_file_open_failed = "Cannot open folder",
+        .str_mscorlib_not_found = "Missing mscorlib.pe!",
+        .str_apps_not_found = "No apps or folders found",
+        .str_ok = "OK",
+        .str_missing = "MISSING",
+        .str_no_pe_folders_found = "No folder or .pe found",
+        .str_no_pe_folders_found_advice = "Put apps in sdmc:/ReSharp3DS",
+        .str_refresh = " Refresh",
+        .str_project_support = "Support project : github.com/saysaa/ReSharp3DS",
+        .str_check = "Integrity Check",
+        .str_folder_found = "Folder - :sdmc/ReSharp3DS",
+        .str_mscorlib_found = "mscorlib.pe",
+        .str_browser_item_count = "Explorer",
+    },
+    // FR
+    {
+        .str_mscorlib_restoring = "Restauration de mscorlib.pe...",
+        .str_mscorlib_failed_restore = "La restauration de mscorlib.pe a échoué !",
+        .str_mscorlib_restored = "mscorlib.pe restauré !",
+        .str_file_open_failed = "Impossible d'ouvrir le dossier",
+        .str_mscorlib_not_found = "mscorlib.pe manquant !",
+        .str_apps_not_found = "Aucune applications ou de dossiers trouvé",
+        .str_ok = "OK",
+        .str_missing = "MANQUANT",
+        .str_no_pe_folders_found = "Aucun dossier ou .pe trouvé",
+        .str_no_pe_folders_found_advice = "Mettez les apps dans sdmc:/ReSharp3DS",
+        .str_refresh = " Rafraichir",
+        .str_project_support = "Supporter le Projet - github.com/saysaa/ReSharp3DS",
+        .str_check = "Verification de l'integrité",
+        .str_folder_found = "Dossier - :sdmc/ReSharp3DS",
+        .str_mscorlib_found = "mscorlib.pe",
+        .str_browser_item_count = "Explorateur",
+    },
+};
