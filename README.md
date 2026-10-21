@@ -68,10 +68,25 @@ If a `.pe` file is declared in `manifest.json`, the launcher can display the man
 
 ## Compile Homebrew
 
-For compile ReSharp3DS : `make codegen && make`
+For compile ReSharp3DS :  
+_1 -> generate **lang_string.c** and **lang_string.h** in codegen folder :_  
+```txt
+make codegen
+```
+_2 -> generate **.3dsx .elf .smdh** files :_  
+```txt
+make
+```
 
-Clean ReSharp3DS : `make clean && make distclean`
-
+For clean ReSharp3DS :  
+ _-> if you want to remove only **.3dsx .elf .smdh** files :_  
+```txt
+make clean
+```
+ _-> if you want to remove **all** generated files :_  
+```txt 
+make distclean
+```
 ---
 
 ## Troubleshooting
